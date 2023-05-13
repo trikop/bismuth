@@ -1,9 +1,0 @@
-{
-    "factorio.versions": [
-        {
-            "name": "testfactorio",
-            "factorioPath": "t:\\Steam\\steamapps\\common\\Factorio\\bin\\x64\\factorio.exe",
-            "active": true
-        }
-    ]
-}
