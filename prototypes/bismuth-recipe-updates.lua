@@ -1,0 +1,63 @@
+-- recipe & tech changes
+--
+local util = require("__bismuth__.data-util");
+
+
+util.add_ingredient("pipe-to-ground", "bismuth-plate", 2)
+util.add_ingredient("pipe-to-ground", "lead-plate", 1)
+util.add_ingredient("pipe-to-ground", "tin-plate", 1)
+util.remove_ingredient("pipe-to-ground", "solder")
+
+if not mods.Krastorio2 and not mods.bzchlorine then
+  util.add_effect("automation", {type = "unlock-recipe", recipe = "bismuth-plate"})
+  util.add_unlock_force("automation", "bismuth-plate")
+end
+
+if mods.Krastorio2 and not mods.bzchlorine then
+  util.add_effect("kr-basic-fluid-handling", {type = "unlock-recipe", recipe = "bismuth-plate"})
+  util.add_unlock_force("automation", "bismuth-plate")
+end
+
+if mods.bzchlorine and not mods.Krastorio2 then
+  util.add_effect("chlorine-processing", {type = "unlock-recipe", recipe = "bismuth-plate"})
+  util.add_unlock_force("kr-basic-fluid-handling", "bismuth-plate")
+end
+
+if mods.Krastorio2 and mods.bzchlorine then
+  util.add_effect("kr-basic-fluid-handling", {type = "unlock-recipe", recipe = "bismuth-plate"})
+  util.add_unlock_force("kr-basic-fluid-handling", "bismuth-plate")
+end
+
+if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
+end
+
+if mods.Krastorio2 then
+  util.add_ingredient("kr-steel-pipe-to-ground", "bismuth-plate", 2)
+  util.add_ingredient("kr-steel-pipe-to-ground", "lead-plate", 1)
+  util.add_ingredient("kr-steel-pipe-to-ground", "tin-plate", 1)
+  util.remove_ingredient("kr-steel-pipe-to-ground", "solder")
+end
+
+if mods["space-exploration"] then
+  util.add_ingredient("se-material-testing-pack", "bismuth-plate", 1)
+  util.add_product("se-scrap-recycling", {name="bismuth-ore", amount=1, probability=0.1})
+  util.add_ingredient("se-space-pipe-to-ground", "bismuth-plate", 2)
+  util.add_ingredient("se-space-pipe-to-ground", "lead-plate", 1)
+  util.add_ingredient("se-space-pipe-to-ground", "tin-plate", 1)
+  util.add_ingredient("se-experimental-alloys-data","bismuth-plate", 1)
+end
+
+if mods.FluidMustFlow then
+  util.add_ingredient("duct-t-junction", "bismuth-plate", 2)
+  util.add_ingredient("duct-t-junction", "lead-plate", 1)
+  util.add_ingredient("duct-t-junction", "tin-plate", 1)
+  util.add_ingredient("duct-curve", "bismuth-plate", 2)
+  util.add_ingredient("duct-curve", "lead-plate", 1)
+  util.add_ingredient("duct-curve", "tin-plate", 1)
+  util.add_ingredient("duct-cross", "bismuth-plate", 2)
+  util.add_ingredient("duct-cross", "lead-plate", 1)
+  util.add_ingredient("duct-cross", "tin-plate", 1)
+  util.add_ingredient("duct-underground", "bismuth-plate", 2)
+  util.add_ingredient("duct-underground", "lead-plate", 1)
+  util.add_ingredient("duct-underground", "tin-plate", 1)
+end
