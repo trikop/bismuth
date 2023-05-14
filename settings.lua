@@ -26,7 +26,7 @@ data:extend({
 		name = "bismuth-contain-bismuth",
 		setting_type = "startup",
         minimum_value = 1,
-        maximum_value = 10000
+        maximum_value = 10000,
 		default_value = 8129,
         order = "aad"
       },
@@ -35,7 +35,7 @@ data:extend({
 		name = "bismuth-contain-sulfur",
 		setting_type = "startup",
         minimum_value = 1,
-        maximum_value = 10000
+        maximum_value = 10000,
 		default_value = 1871,
         order = "aae"
       },
