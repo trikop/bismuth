@@ -2,7 +2,8 @@
 Version: 0.0.3
 Date: 2023-06-
   Features:
-    - a
+    - Added changelog
+    - Fixed ore density being too high
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 2023-06-14

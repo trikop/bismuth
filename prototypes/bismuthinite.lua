@@ -1,4 +1,4 @@
-local resource_autoplace = require("resource-autoplace")
+local resource_autoplace = require("resource-autoplace");
 local noise = require('noise');
 local util = require("__bismuth__.data-util");
 local fluid = {}
@@ -71,7 +71,7 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
           autoplace = resource_autoplace.resource_autoplace_settings{
             name = "bismuth-ore",
             order = "b-z",
-            base_density = 20000,
+            base_density = 5,
             base_spots_per_km2 = 1,
             has_starting_area_placement = false,
             regular_rq_factor_multiplier = 1,
