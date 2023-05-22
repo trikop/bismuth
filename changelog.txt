@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2023-05-22
+  Features:
+    - Greatly decreased the bismuth ore byproduct from other ore (balancing feedback is very much welcome:))
+    - Added ammo made from bismuth that is slightly worse, but cheaper (to have bismuth go somewhere during the early game)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2023-05-16
   Features:
