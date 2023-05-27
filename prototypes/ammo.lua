@@ -155,7 +155,7 @@ local shotgun = {}
 local k2pistol = {}
 local k2rifle = {}
 
-if mods.BrassTacks or mods.bzlead then
+if mods.BrassTacks then
   magazine = {{"bismuth-plate", 3}, {"brass-plate", 1}}
 else
   magazine = {{"bismuth-plate", 3}, {"iron-plate", 1}}
