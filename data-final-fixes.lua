@@ -64,8 +64,12 @@ if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false
     end
 
     if mods["space-exploration"] then 
-        util.add_to_product("se-core-fragment-omni", "bismuth-ore", -2)
+        util.add_to_product("se-core-fragment-omni", "bismuth-ore", -7)
+        util.add_product("se-core-fragment-omni", {type="item", name="bismuth-ore", amount=1, probability=0.12})
         util.remove_product("se-core-fragment-omni", "sulfur")
 
+        util.add_product("se-core-fragment-bismuth-ore", {type="item", name="bismuth-ore", amount=1, probability=0.258})
+        util.add_to_product("se-core-fragment-bismuth-ore", "sulfur", -13)
+        util.add_product("se-core-fragment-bismuth-ore", {type="item", name="sulfur", amount=1, probability=0.742})
     end
 end
