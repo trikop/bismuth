@@ -1,13 +1,16 @@
 local damagemagazine = {}
+local namefirearm
 if mods.Krastorio2 then
+  namefirearm = "pistol-magazine-bismuth"
   damagemagazine = { amount = 7, type = "physical"}
 else
+  namefirearm = "firearm-magazine-bismuth"
   damagemagazine = { amount = 3, type = "physical"}
 end
 data:extend({
   {
     type = "ammo",
-    name = "firearm-magazine-bismuth",
+    name = namefirearm,
     icon = "__base__/graphics/icons/firearm-magazine.png",
     icon_size = 64, icon_mipmaps = 4,
     ammo_type =
@@ -172,13 +175,13 @@ end
 if mods.BrassTacks then
   k2pistol = {{"coal", 1}, {"bismuth-plate", 1}, {"brass-plate", 1}}
 else
-  k2pistol = {{"coal", 1}, {"bismuth-plate", 1},{"iron-plate", 1}}
+  k2pistol = {{"coal", 1}, {"bismuth-plate", 1}}
 end
 
 if mods.BrassTacks then
   k2rifle = {{"coal", 1}, {"bismuth-plate", 2}, {"brass-plate", 1}}
 else
-  k2rifle = {{"coal", 1}, {"bismuth-plate", 2},{"iron-plate", 1}}
+  k2rifle = {{"coal", 1}, {"bismuth-plate", 2},{"copper-plate", 1}}
 end
 
 if not mods.Krastorio2 then
@@ -229,7 +232,7 @@ else
       order = "a[basic-clips]-a[pistol-magazine]",
       energy_required = 1,
       ingredients = k2pistol,
-      result = "firearm-magazine-bismuth",
+      result = "pistol-magazine-bismuth",
       result_count = 1,
       enabled = true,
       icons = {
@@ -278,28 +281,3 @@ else
     }
 })
 end
-
-
-
--- else
---   data:extend({
---     {
---       type = "recipe",
---       name = "firearm-magazine-bismuth-iron",
---       category = "crafting",
---       order = "a[basic-clips]-a[pistol-magazine]",
---       energy_required = 1,
---       ingredients = {{"bismuth-plate", 4}, {"iron-plate", 4}},
---       result = "pistol-ammo",
---       result_count = 2,
---       enabled = false,
---       icons = {
---         { icon = kr_items_with_variations_icons_path .. "ammo/pistol-ammo-1.png", icon_size = 64},
---         { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
---           scale=0.25, shift= {8, -6}},
---         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
---           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}}
---       }
---     }
--- })
--- end
