@@ -1,10 +1,10 @@
 data:extend({
       {
 		    type = "string-setting",
-		    name = "bismuth-disable-pcb-solder",
+		    name = "bismuth-reduce-pcb-solder",
 		    setting_type = "startup",
-		    default_value = "Remove none (reccomended)",
-        allowed_values = {"Remove all (not reccomended)", "Remove most (works)", "Remove none (reccomended)"},
+		    default_value = "Default (reccomended)",
+        allowed_values = {"Default (reccomended)","Reduced"},
         order = "aaa"
       },
       {
