@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2023-06-09
+  Features:
+    - Fixed mod being broken by PCB solder not being unlockable, and therefore there would be almost no use for bismuth at all xD
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2023-05-31
   Features:
