@@ -7,6 +7,12 @@ local prereq = {}
 if mods.bztin and mods.bzgold then
   pcb_solder_ingredients = {{"tin-plate", 4}, {"bismuth-plate", 6}, {"silver-ore", 1}}
   icon = "__bztin__/graphics/icons/solder.png"
+elseif mods.bztin then
+  pcb_solder_ingredients = {{"tin-plate", 4}, {"bismuth-plate", 6}}
+  icon = "__bztin__/graphics/icons/solder.png"
+elseif mods.bzgold then
+  pcb_solder_ingredients = {{"steel-plate", 4}, {"bismuth-plate", 6}, {"silver-ore", 1}}
+  icon = "__bismuth__/graphics/icons/solder.png"
 else
   pcb_solder_ingredients = {{"steel-plate", 4}, {"bismuth-plate", 6}}
   icon = "__bismuth__/graphics/icons/solder.png"
