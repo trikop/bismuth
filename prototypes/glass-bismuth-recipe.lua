@@ -1,19 +1,24 @@
 local util = require("data-util");
 
 local glass_ingredients = {}
-local icon = {}
+local icon = "__bismuth__/graphics/icons/glass.png"
 local prereq = {}
 -- add lime from calcium
 
-if mods["aai-industries"] and mods.bzsilicon then
-  glass_ingredients = {{"silicon", 3}, {"bismuth-plate", 6}, {"silver-ore", 1}}
-  icon = "__bztin__/graphics/icons/glass.png"
-elseif mods.bztin and mods.bzgold then
-  glass_ingredients = {{"tin-plate", 4}, {"bismuth-plate", 6}, {"silver-ore", 1}}
-  icon = "__bismuth__/graphics/icons/glass.png"
+if mods.bzfoundry then
+  category = "founding"
 else
-  glass_ingredients = {{"steel-plate", 4}, {"bismuth-plate", 6}}
-  icon = "__bismuth__/graphics/icons/glass.png"
+  category = "crafting"
+end
+
+if mods["aai-industry"] and mods.bzsilicon and mods.calcium then
+  glass_ingredients = {{"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
+elseif mods["aai-industry"] and mods.bzsilicon then
+  glass_ingredients = {{"silica", 4}, {"bismuth-plate", 2}}
+elseif mods["aai-industries"] then
+  glass_ingredients = {{"sand", 8}, {"bismuth-plate", 2}}
+else
+  glass_ingredients = {{"stone", 4}, {"bismuth-plate", 2}}
 end
 data:extend({
 {
@@ -28,12 +33,12 @@ data:extend({
 {
     type = "recipe",
     name = "bismuth-glass",
-    category = "crafting",
+    category = category,
     order = "d[bismuth-glass]",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     ingredients = glass_ingredients, 
-    results = {{"bismuth-glass", 6}},
+    results = {{type = "item", name = "bismuth-glass", amount = 1, probability = 0.6}},
 },
 {
     type = "technology",
@@ -45,10 +50,12 @@ data:extend({
     },
     unit = {
     count = 60, time = 10,
-    ingredients = {{"automation-science-pack", 1}},
+    ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
     },
     prerequisites = {"automation"},
 },
 })
-util.add_prerequisite("logistic-science-pack", "bismuth-glass")
+util.add_prerequisite("bismuth-glass", "silica-processing")
+util.add_prerequisite("military-science-pack", "pcb-solder")
+util.add_prerequisite("chemical-science-pack", "bismuth-glass")
 util.add_unlock_force("bismuth-glass", "bismuth-glass")

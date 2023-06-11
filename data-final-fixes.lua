@@ -1,9 +1,7 @@
 require("prototypes/bismuth-recipe-modules")
 require("prototypes/recipe-changes")
 require("prototypes/solder-recipe-final-fixes")
-
-
-
+require("prototypes/glass-final-fixes")
 
 local util = require("__bismuth__.data-util");
 if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false then

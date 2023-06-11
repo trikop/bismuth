@@ -198,8 +198,6 @@ if not mods.Krastorio2 then
       enabled = false,
       icons = {
         { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
-        { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
-          scale=0.25, shift= {8, -6}},
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
       },
@@ -216,8 +214,6 @@ if not mods.Krastorio2 then
       enabled = false,
       icons = {
         { icon = "__base__/graphics/icons/shotgun-shell.png", icon_size = 64},
-        { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
-          scale=0.25, shift= {8, -6}},
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}}
       }
@@ -237,8 +233,6 @@ else
       enabled = true,
       icons = {
         { icon = kr_items_with_variations_icons_path .. "ammo/pistol-ammo-1.png", icon_size = 64},
-        { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
-          scale=0.25, shift= {8, -6}},
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
       },
@@ -255,8 +249,6 @@ else
       enabled = false,
       icons = {
         { icon = kr_items_with_variations_icons_path .. "ammo/rifle-ammo-1.png", icon_size = 64},
-        { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
-          scale=0.25, shift= {8, -6}},
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
       },
@@ -273,8 +265,6 @@ else
       enabled = false,
       icons = {
         { icon = "__base__/graphics/icons/shotgun-shell.png", icon_size = 64},
-        { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
-          scale=0.25, shift= {8, -6}},
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}}
       }
