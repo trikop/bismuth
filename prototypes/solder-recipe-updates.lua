@@ -1,6 +1,11 @@
 local util = require("__bismuth__.data-util");
 
-util.add_ingredient("assembling-machine-2","pcb-solder", 2)
+if mods.bzfoundry then
+    util.add_prerequisite("pcb-solder", "foundry")
+end
+
+util.add_ingredient("assembling-machine-2","pcb-solder", 5)
+util.remove_ingredient("assembling-machine-2","solder")
 util.add_ingredient("assembling-machine-3","pcb-solder", 8)
 util.add_ingredient("inserter","solder", 1)
 util.add_ingredient("long-handed-inserter","solder", 1)

@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.9
-Date: 2023-06-
+Date: 2023-06-11
   Features:
-    - Added bismuth glass (placeholder graphics)
+    - Added bismuth glass
+    - (bzfoundry) Moved making pcb solder to the foundry
+    - (bz) changed pcb solder recipe to use less silver
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 2023-06-09
