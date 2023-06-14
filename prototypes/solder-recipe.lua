@@ -5,11 +5,11 @@ local pcb_solder_results = {}
 local icon = {}
 local category = {}
 
-if mods.bzfoundry then
-  category = "founding"
-else
-  category = "crafting"
-end
+-- if mods.bzfoundry then
+--   category = "founding"
+-- else
+--   category = "crafting"
+-- end
 
 if mods.bztin and mods.bzgold then
   pcb_solder_ingredients = {{"tin-plate", 4}, {"bismuth-plate", 6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1}}
@@ -28,6 +28,7 @@ else
   pcb_solder_results = {{"pcb-solder", 6}}
   icon = "__bismuth__/graphics/icons/solder.png"
 end
+
 data:extend({
 {
     type = "item",
@@ -46,7 +47,7 @@ data:extend({
       {icon = icon, icon_size = 128, icon_mipmaps = 3},
       {icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
     },
-    category = category,
+    category = "crafting",
     order = "d[pcb-solder]",
     enabled = false,
     energy_required = 1.6,
@@ -68,6 +69,11 @@ data:extend({
     prerequisites = {"automation"},
 },
 })
+
+if mods.bzfoundry and data.raw.item["foundry"] then
+  util.set_to_founding("pcb-solder", {force=true})
+end
+
 util.set_main_product("pcb-solder", "pcb-solder")
 util.add_prerequisite("logistic-science-pack", "pcb-solder")
 util.add_unlock_force("pcb-solder", "pcb-solder")

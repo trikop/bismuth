@@ -5,11 +5,11 @@ local icon = "__bismuth__/graphics/icons/glass.png"
 local prereq = {}
 -- add lime from calcium
 
-if mods.bzfoundry then
-  category = "founding"
-else
-  category = "crafting"
-end
+-- if data.raw.item["foundry"] then
+--   category = "founding"
+-- else
+--   category = "crafting"
+-- end
 
 if mods["aai-industry"] and mods.bzsilicon and mods.calcium then
   glass_ingredients = {{"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
@@ -33,7 +33,7 @@ data:extend({
 {
     type = "recipe",
     name = "bismuth-glass",
-    category = category,
+    category = "crafting",
     order = "d[bismuth-glass]",
     enabled = false,
     energy_required = 1,
@@ -55,6 +55,11 @@ data:extend({
     prerequisites = {"automation"},
 },
 })
+
+if mods.bzfoundry and data.raw.item["foundry"] then
+  util.set_to_founding("bismuth-glass", {force=true})
+end
+
 util.add_prerequisite("bismuth-glass", "silica-processing")
 util.add_prerequisite("military-science-pack", "pcb-solder")
 util.add_prerequisite("chemical-science-pack", "bismuth-glass")
