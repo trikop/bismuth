@@ -1,15 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2023-06-16
+  Features:
+    - Corrected the size of bismuth ore
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2023-06-14
   Features:
-    - (bzfoundry) made it work with foundry in minimal mode
+    - (bzfoundry) Made it work with foundry in minimal mode
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2023-06-11
   Features:
     - Added bismuth glass
     - (bzfoundry) Moved making pcb solder to the foundry
-    - (bz) changed pcb solder recipe to use less silver
+    - (bz) Changed pcb solder recipe to use less silver
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 2023-06-09
@@ -19,7 +24,7 @@ Date: 2023-06-09
 Version: 0.0.7
 Date: 2023-05-31
   Features:
-    - (K2) fixed duplicate ammo recipes 
+    - (K2) Fixed duplicate ammo recipes 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2023-05-30
