@@ -38,8 +38,8 @@ if mods["space-exploration"] then
   util.add_ingredient("se-space-pipe-to-ground", "bismuth-plate", 2)
   util.add_ingredient("se-space-pipe-to-ground", "lead-plate", 1)
   util.add_ingredient("se-space-pipe-to-ground", "tin-plate", 1)
+  data.raw.item["se-space-thermodynamics-laboratory"].ingredient_count = 24, --made it 24, so it won't conflict with another mod hopefully xD
   util.add_ingredient("se-experimental-alloys-data","bismuth-plate", 1)
-  util.remove_ingredient("se-experimental-alloys-data","se-beryllium-plate")
 end
 
 if mods.FluidMustFlow then
