@@ -39,6 +39,7 @@ if mods["space-exploration"] then
   util.add_ingredient("se-space-pipe-to-ground", "lead-plate", 1)
   util.add_ingredient("se-space-pipe-to-ground", "tin-plate", 1)
   util.add_ingredient("se-experimental-alloys-data","bismuth-plate", 1)
+  util.remove_ingredient("se-experimental-alloys-data","se-beryllium-plate")
 end
 
 if mods.FluidMustFlow then
