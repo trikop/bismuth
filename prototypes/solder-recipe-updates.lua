@@ -73,6 +73,7 @@ end
 if mods.Krastorio2 then
     util.set_tech_recipe("pcb-solder", {{"basic-tech-card", 1},{"automation-science-pack", 1}})
     util.add_prerequisite("pcb-solder", "kr-basic-fluid-handling")
+    util.add_ingredient("ai-core","pcb-solder", 2)
     util.add_ingredient("kr-advanced-assembling-machine","pcb-solder", 5)
     util.add_ingredient("kr-superior-inserter","pcb-solder", 1)
     util.add_ingredient("kr-superior-long-inserter","pcb-solder", 1)
@@ -127,6 +128,7 @@ if mods["aai-containers"] then
 end
 
 if mods.bztin then
+    util.remove_ingredient("processing-unit", "solder")
     util.remove_ingredient("advanced-circuit", "solder")
     util.add_ingredient("advanced-circuit","pcb-solder", 4)
 else
@@ -149,4 +151,14 @@ if mods.bzgold then
     util.add_ingredient("processing-unit","pcb-solder", 1)
 else
     util.add_ingredient("processing-unit","pcb-solder", 23)
+end
+
+if mods.MDbobelectronics then
+    util.add_ingredient("advanced-processing-unit", "pcb-solder", 4)
+    util.remove_ingredient("advanced-processing-unit", "solder")
+    util.add_ingredient("BOBMD-electronics-components", "pcb-solder", 2)
+    util.add_ingredient("integrated-electronics", "pcb-solder", 4)
+    util.add_ingredient("processing-electronics", "pcb-solder", 6)
+
+    util.add_or_add_to_ingredient("processing-unit", "pcb-solder", 5)
 end

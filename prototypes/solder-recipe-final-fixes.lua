@@ -4,6 +4,20 @@ if mods["space-exploration"] then
     util.replace_ingredient("se-space-accumulator", "solder", "pcb-solder")
     util.add_ingredient("assembling-machine-1","solder", 2)
 
+
+    util.add_ingredient("se-empty-data","pcb-solder", 3)
+    util.add_ingredient("se-empty-data-gold","pcb-solder", 3)
+    util.add_ingredient("se-machine-learning-data","pcb-solder", 2)
+    util.add_ingredient("se-conductivity-data","pcb-solder", 2)
+    util.add_ingredient("se-neural-anomaly-data","pcb-solder", 1)
+    util.add_ingredient("se-space-assembling-machine","pcb-solder", 8)
+    util.add_ingredient("se-compact-beacon","pcb-solder", 15)
+    util.add_ingredient("se-wide-beacon","pcb-solder", 30)
+    util.add_ingredient("se-space-science-lab","pcb-solder", 100)
+    util.add_ingredient("se-holmium-solenoid","pcb-solder", 2)
+    util.remove_ingredient("se-holmium-solenoid","solder")
+    util.add_ingredient("se-quantum-processor","pcb-solder", 4)
+
     util.add_ingredient("productivity-module-4","pcb-solder", 1)
     util.add_ingredient("productivity-module-5","pcb-solder", 1)
     util.add_ingredient("productivity-module-6","pcb-solder", 2)
@@ -22,23 +36,11 @@ if mods["space-exploration"] then
     util.add_ingredient("effectivity-module-7","pcb-solder", 4)
     util.add_ingredient("effectivity-module-8","pcb-solder", 8)
     util.add_ingredient("effectivity-module-9","pcb-solder", 10)
-    if util.me.get_setting("bismuth-reduce-pcb-solder") == "Remove none (reccomended)" then
+    if util.me.get_setting("bismuth-reduce-pcb-solder") == "Default (reccomended)" then
         util.add_ingredient("se-space-transport-belt","pcb-solder", 1)
         util.add_ingredient("se-meteor-point-defence","pcb-solder", 20)
         util.add_ingredient("se-meteor-defence-ammo","pcb-solder", 20)
         util.add_ingredient("se-meteor-defence","pcb-solder", 200)
-        util.add_ingredient("se-quantum-processor","solder", 4)
-
-        util.add_ingredient("se-empty-data","pcb-solder", 3)
-        util.add_ingredient("se-empty-data-gold","pcb-solder", 3) -- I assume this doesn't need to be in it's own
-        util.add_ingredient("se-machine-learning-data","pcb-solder", 2)
-        util.add_ingredient("se-conductivity-data","pcb-solder", 2)
-        util.add_ingredient("se-neural-anomaly-data","pcb-solder", 1)
-        util.add_ingredient("se-space-assembling-machine","pcb-solder", 8)
-        util.add_ingredient("se-compact-beacon","pcb-solder", 15)
-        util.add_ingredient("se-wide-beacon","pcb-solder", 30)
-        util.add_ingredient("se-space-science-lab","pcb-solder", 100)
-
         util.add_ingredient("jetpack-1","pcb-solder", 10)
         util.add_ingredient("jetpack-2","pcb-solder", 20)
         util.add_ingredient("jetpack-3","pcb-solder", 30)

@@ -3,6 +3,9 @@ require("prototypes/recipe-changes")
 require("prototypes/solder-recipe-final-fixes")
 require("prototypes/glass-final-fixes")
 
+require("prototypes/compat/bobselectronics")
+require("prototypes/compat/rubber-n-resin")
+
 local util = require("__bismuth__.data-util");
 if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false then
     if mods.Krastorio2 then

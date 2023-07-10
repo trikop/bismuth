@@ -12,13 +12,13 @@ local prereq = {}
 -- end
 
 if mods["aai-industry"] and mods.bzsilicon and mods.calcium then
-  glass_ingredients = {{"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
+  glass_ingredients = {{"sand", 6}, {"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
 elseif mods["aai-industry"] and mods.bzsilicon then
-  glass_ingredients = {{"silica", 4}, {"bismuth-plate", 2}}
+  glass_ingredients = {{"sand", 6}, {"silica", 4}, {"bismuth-plate", 2}}
 elseif mods["aai-industries"] then
-  glass_ingredients = {{"sand", 8}, {"bismuth-plate", 2}}
+  glass_ingredients = {{"sand", 10}, {"bismuth-plate", 2}}
 else
-  glass_ingredients = {{"stone", 4}, {"bismuth-plate", 2}}
+  glass_ingredients = {{"stone", 5}, {"bismuth-plate", 2}}
 end
 data:extend({
 {

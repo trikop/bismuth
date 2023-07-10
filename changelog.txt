@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 2023-07-10
+  Features:
+    - Added bismuth in rubber if the mods bobselectronics or Rubber and Resin are enabled
+    - (SE) Added sand to bismuth glass
+    - Added pcb solder to bobselectronics, and to more recipes in general
+---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2023-06-17
   Features:
