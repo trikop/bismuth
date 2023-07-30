@@ -5,12 +5,6 @@ local icon = "__bismuth__/graphics/icons/glass.png"
 local prereq = {}
 -- add lime from calcium
 
--- if data.raw.item["foundry"] then
---   category = "founding"
--- else
---   category = "crafting"
--- end
-
 if mods["aai-industry"] and mods.bzsilicon and mods.calcium then
   glass_ingredients = {{"sand", 6}, {"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
 elseif mods["aai-industry"] and mods.bzsilicon then
