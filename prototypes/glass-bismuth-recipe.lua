@@ -55,6 +55,6 @@ if mods.bzfoundry and data.raw.item["foundry"] then
 end
 
 util.add_prerequisite("bismuth-glass", "silica-processing")
-util.add_prerequisite("military-science-pack", "pcb-solder")
+util.add_prerequisite("military-science-pack", "bismuth-glass")
 util.add_prerequisite("chemical-science-pack", "bismuth-glass")
 util.add_unlock_force("bismuth-glass", "bismuth-glass")
