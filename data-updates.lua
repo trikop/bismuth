@@ -4,7 +4,7 @@ require("prototypes/bismuth-recipe-modules")
 
 require("map-gen-preset-updates")
 
-require("prototypes/glass-updates")
+require("prototypes/glass-bismuth-recipe")
 require("prototypes/solder-recipe")
 require("prototypes/solder-recipe-updates")
 
