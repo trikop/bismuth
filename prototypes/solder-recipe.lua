@@ -33,8 +33,11 @@ data:extend({
 {
     type = "item",
     name = "pcb-solder",
-    icon = icon,
-    icon_size = 128,
+    icons = {
+      {icon = icon, icon_size = 128},
+      {icon = icon, icon_size = 128, tint = {r = 0.7, g = 0.5, b = 0.9, a = 1}},
+      {icon = icon, icon_size = 128, tint = {r = 0.36, g = 0.32, b = 0.26, a = 0.4}},
+    },
     subgroup = "intermediate-product",
     order = "b[pcb-solder]",
     stack_size = util.get_stack_size(100),
@@ -42,9 +45,10 @@ data:extend({
 {
     type = "recipe",
     name = "pcb-solder",
-    icons =
-    {
-      {icon = icon, icon_size = 128, icon_mipmaps = 3},
+    icons = {
+      {icon = icon, icon_size = 128},
+      {icon = icon, icon_size = 128, tint = {r = 0.7, g = 0.5, b = 0.9, a = 1}},
+      {icon = icon, icon_size = 128, tint = {r = 0.36, g = 0.32, b = 0.26, a = 0.4}},
       {icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
     },
     category = "crafting",
@@ -57,8 +61,11 @@ data:extend({
 {
     type = "technology",
     name = "pcb-solder",
-    icon = icon,
-    icon_size = 128,
+    icons = {
+      {icon = icon, icon_size = 128},
+      {icon = icon, icon_size = 128, tint = {r = 0.7, g = 0.5, b = 0.9, a = 1}},
+      {icon = icon, icon_size = 128, tint = {r = 0.36, g = 0.32, b = 0.026, a = 0.4}},
+    },
     effects = {
     { type = "unlock-recipe", recipe = "pcb-solder" },
     },
