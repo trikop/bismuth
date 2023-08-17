@@ -5,11 +5,11 @@ local icon = "__bismuth__/graphics/icons/glass.png"
 local prereq = {}
 -- add lime from calcium
 
-if mods["aai-industry"] and mods.bzsilicon and mods.calcium then
+if data.raw.item["sand"] and data.raw.item["silica"] and data.raw.item["calcium-plate"] then
   glass_ingredients = {{"sand", 6}, {"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
-elseif mods["aai-industry"] and mods.bzsilicon then
+elseif data.raw.item["sand"] and data.raw.item["silica"] then
   glass_ingredients = {{"sand", 6}, {"silica", 4}, {"bismuth-plate", 2}}
-elseif mods["aai-industries"] then
+elseif data.raw.item["sand"] then
   glass_ingredients = {{"sand", 10}, {"bismuth-plate", 2}}
 else
   glass_ingredients = {{"stone", 5}, {"bismuth-plate", 2}}
@@ -64,9 +64,9 @@ if mods.bzcarbon then
 end
 
 if mods["space-exploration"] then
-  if mods.bzsilicon and mods.calcium then
+  if data.raw.item["silica"] and data.raw.item["calcium-plate"] then
     glass_ingredients = {{"sand", 22}, {"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
-  elseif mods.bzsilicon then
+  elseif data.raw.item["silica"] then
     glass_ingredients = {{"sand", 22}, {"silica", 4}, {"bismuth-plate", 2}}
   else
     glass_ingredients = {{"sand", 26}, {"bismuth-plate", 2}}
