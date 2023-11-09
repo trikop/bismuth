@@ -73,7 +73,7 @@ data:extend(
         {"enriched-bismuth", 5}
       },
       result = "bismuth-plate",
-      result_count = 5,
+      result_count = 12,
       order = "b[bismuth-plate]-b[enriched-bismuth-plate]"
   },	
 	{
