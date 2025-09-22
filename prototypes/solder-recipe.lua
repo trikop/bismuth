@@ -12,20 +12,20 @@ local category = {}
 -- end
 
 if mods.bztin and mods.bzgold then
-  pcb_solder_ingredients = {{"tin-plate", 4}, {"bismuth-plate", 6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1}}
-  pcb_solder_results = {{"pcb-solder", 6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
+  pcb_solder_ingredients = {{type="item", name="tin-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1}}
+  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
   icon = "__bztin__/graphics/icons/solder.png"
 elseif mods.bztin then
-  pcb_solder_ingredients = {{"tin-plate", 4}, {"bismuth-plate", 6}}
-  pcb_solder_results = {{"pcb-solder", 6}}
+  pcb_solder_ingredients = {{type="item", name="tin-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}}
+  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}}
   icon = "__bztin__/graphics/icons/solder.png"
 elseif mods.bzgold then
-  pcb_solder_ingredients = {{"steel-plate", 4}, {"bismuth-plate", 6}, {"silver-ore", 1}}
-  pcb_solder_results = {{"pcb-solder", 6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
+  pcb_solder_ingredients = {{type="item", name="steel-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}, {type="item", name="silver-ore", amount=1}}
+  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
   icon = "__bismuth__/graphics/icons/solder.png"
 else
-  pcb_solder_ingredients = {{"steel-plate", 4}, {"bismuth-plate", 6}}
-  pcb_solder_results = {{"pcb-solder", 6}}
+  pcb_solder_ingredients = {{type="item", name="steel-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}}
+  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}}
   icon = "__bismuth__/graphics/icons/solder.png"
 end
 
@@ -40,7 +40,7 @@ data:extend({
     },
     subgroup = "intermediate-product",
     order = "b[pcb-solder]",
-    stack_size = util.get_stack_size(100),
+    stack_size = 100,
 },
 {
     type = "recipe",

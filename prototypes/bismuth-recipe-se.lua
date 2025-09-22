@@ -6,7 +6,7 @@ if mods["space-exploration"] then
   se_delivery_cannon_recipes[util.me.bismuth_plate] = {name= util.me.bismuth_plate}
   util.se_landfill({ore="bismuth-ore"})
 
-if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
+if string.sub(mods["space-exploration"], 1, 3) == "0.7" then
   util.se_matter({ore="bismuth-ore", energy_required=1, quant_out=10, stream_out=60})
   data:extend({
   {
@@ -51,7 +51,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     },
     energy_required = 60,
     ingredients = {
-      {name = mods.Krastorio2 and "enriched-bismuth" or "bismuth-ore", amount = 24},
+      {type = "item", name = mods.Krastorio2 and "enriched-bismuth" or "bismuth-ore", amount = 24},
       {type = "fluid", name = "se-pyroflux", amount = 10},
     },
     enabled = false,
@@ -63,7 +63,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     type = "recipe",
     name = "bismuth-ingot",
     category = "casting",
-    results = {{"bismuth-ingot", 1}},
+    results = {{type="item", name="bismuth-ingot", amount=1}},
     energy_required = 25,
     ingredients = {
       {type = "fluid", name = "molten-bismuth", amount = 250},
@@ -82,11 +82,11 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
       {icon = "__bismuth__/graphics/icons/bismuth-ingot.png", icon_size = 128, scale = 0.125, shift = {-8, -8}},
     },
     results = {
-      {name = "bismuth-plate", amount = 10},
+      {type = "item", name = "bismuth-plate", amount = 10},
     },
     energy_required = 5,
     ingredients = {
-      {name = "bismuth-ingot", amount = 1}
+      {type = "item", name = "bismuth-ingot", amount = 1}
     },
     enabled = false,
     always_show_made_in = true,
@@ -120,11 +120,11 @@ else
       always_show_made_in = true,
       allow_as_intermediate = false,
       ingredients = {
-        {name = "enriched-bismuth", amount = 8},
-        {name = "se-vulcanite-block", amount = 1},
+        {type = "item", name = "enriched-bismuth", amount = 8},
+        {type = "item", name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.me.bismuth_plate, amount = 12},
+        {type = "item", name = util.me.bismuth_plate, amount = 12},
       },
       icons =
       {
@@ -151,11 +151,11 @@ else
       always_show_made_in = true,
       allow_as_intermediate = false,
       ingredients = {
-        {name = "bismuth-ore", amount = 8},
-        {name = "se-vulcanite-block", amount = 1},
+        {type = "item", name = "bismuth-ore", amount = 8},
+        {type = "item", name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.me.bismuth_plate, 12},
+        {type = "item", name = util.me.bismuth_plate, amount = 12},
       },
       icons =
       {

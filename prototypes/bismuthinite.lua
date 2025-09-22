@@ -1,13 +1,18 @@
 local resource_autoplace = require("resource-autoplace");
-local noise = require('noise');
 local util = require("__bismuth__.data-util");
 local fluid = {}
+
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["bismuth-ore"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["bismuth-ore"] = {}
+resource_autoplace.initialize_patch_set("bismuth-ore", true)
 
 local bismuth_contain_bismuth = util.me.get_setting("bismuth-contain-bismuth") / 10000
 local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 10000
 
-  if mods.Krastorio2 or mods.bzchlorine then
+  if mods.bzchlorine then
     fluid = "chlorine"
+  elseif mods.Krastorio2 then
+    fluid = "kr-chlorine"
   else
     fluid = "water"
   end
@@ -18,10 +23,6 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
         name = "bismuth-ore",
         richness = true,
         order = "b-e"
-      },
-      {
-        type = "noise-layer",
-        name = "bismuth-ore"
       },
       {
         type = "item",
@@ -37,7 +38,7 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
         },
         subgroup = "raw-resource",
         order = "t-c-a",
-        stack_size = util.get_stack_size(50)
+        stack_size = 50
       },
     })
     if util.me.get_setting("bismuth-disable-bismuthinite-ore") == false then
@@ -47,6 +48,7 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
           name = "bismuth-ore",
           icon = "__bismuth__/graphics/icons/bismuth-ore.png",
           icon_size = 64,
+          subgroup = "raw-resource",
           flags = {"placeable-neutral"},
           order="a-b-a",
           map_color = {r=0.5, g=0.33, b=0.16},
@@ -83,20 +85,12 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
               {
                 sheet =
                 {
-            filename = "__bismuth__/graphics/ores/bismuthinite.png",
-            priority = "extra-high",
-            size = 64,
-            frame_count = 8,
-            variation_count = 8,
-            hr_version =
-            {
             filename = "__bismuth__/graphics/ores/hr-bismuthinite.png",
               priority = "extra-high",
               size = 128,
               frame_count = 8,
               variation_count = 8,
               scale = 0.5
-            }
                 }
           },
         },

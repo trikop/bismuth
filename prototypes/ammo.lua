@@ -52,7 +52,8 @@ data:extend({
     magazine_size = 10,
     subgroup = "ammo",
     order = "a[basic-clips]-a[firearm-magazine]",
-    stack_size = 200
+    stack_size = 200,
+    ammo_category = "bullet"
   },
   {
     type = "ammo",
@@ -99,7 +100,8 @@ data:extend({
     magazine_size = 10,
     subgroup = "ammo",
     order = "b[shotgun]-a[basic]",
-    stack_size = 200
+    stack_size = 200,
+    ammo_category = "bullet"
   },
 })
 if mods.Krastorio2 then
@@ -107,7 +109,7 @@ if mods.Krastorio2 then
     {
       type = "ammo",
       name = "rifle-magazine-bismuth",
-      icon = kr_items_with_variations_icons_path .. "ammo/rifle-ammo-1.png",
+      icon = "__Krastorio2Assets__/icons/ammo/rifle-magazine.png",
       icon_size = 64, icon_mipmaps = 4,
       ammo_type =
       {
@@ -148,7 +150,8 @@ if mods.Krastorio2 then
       magazine_size = 10,
       subgroup = "ammo",
       order = "a[basic-clips]-a[firearm-magazine]",
-      stack_size = 200
+      stack_size = 200,
+      ammo_category = "bullet"
     },
   })
 end
@@ -159,29 +162,29 @@ local k2pistol = {}
 local k2rifle = {}
 
 if mods.BrassTacks then
-  magazine = {{"bismuth-plate", 3}, {"brass-plate", 1}}
+  magazine = {{type="item", name="bismuth-plate", amount=3}, {type="item", name="brass-plate", amount=1}}
 else
-  magazine = {{"bismuth-plate", 3}, {"iron-plate", 1}}
+  magazine = {{type="item", name="bismuth-plate", amount=3}, {type="item", name="iron-plate", amount=1}}
 end
 
 if mods.BrassTacks and mods.bzchlorine then
-  shotgun = {{"stone", 1}, {"bismuth-plate", 2}, {"brass-plate", 1}, {"salt", 1}}
+  shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}, {type="item", name="salt", amount=1}}
 elseif mods.BrassTacks then
-  shotgun = {{"stone", 1}, {"bismuth-plate", 2}, {"brass-plate", 1}}
+  shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}}
 else
-  shotgun = {{"stone", 1}, {"bismuth-plate", 2}, {"iron-plate", 1}}
+  shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="iron-plate", amount=1}}
 end
 
 if mods.BrassTacks then
-  k2pistol = {{"coal", 1}, {"bismuth-plate", 1}, {"brass-plate", 1}}
+  k2pistol = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=1}, {type="item", name="brass-plate", amount=1}}
 else
-  k2pistol = {{"coal", 1}, {"bismuth-plate", 1}}
+  k2pistol = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=1}}
 end
 
 if mods.BrassTacks then
-  k2rifle = {{"coal", 1}, {"bismuth-plate", 2}, {"brass-plate", 1}}
+  k2rifle = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}}
 else
-  k2rifle = {{"coal", 1}, {"bismuth-plate", 2},{"copper-plate", 1}}
+  k2rifle = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=2},{type="item", name="copper-plate", amount=1}}
 end
 
 if not mods.Krastorio2 then
@@ -193,8 +196,7 @@ if not mods.Krastorio2 then
       order = "a[basic-clips]-a[firearm-magazine]",
       energy_required = 1,
       ingredients = magazine,
-      result = "firearm-magazine-bismuth",
-      result_count = 1,
+      results = {{type="item", name="firearm-magazine-bismuth", amount=1}},
       enabled = false,
       icons = {
         { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
@@ -209,8 +211,7 @@ if not mods.Krastorio2 then
       order = "a[shotgun]-a[basic]",
       energy_required = 1,
       ingredients = shotgun,
-      result = "shotgun-shell-bismuth",
-      result_count = 1,
+      results = {{type="item", name="shotgun-shell-bismuth", amount=1}},
       enabled = false,
       icons = {
         { icon = "__base__/graphics/icons/shotgun-shell.png", icon_size = 64},
@@ -228,11 +229,10 @@ else
       order = "a[basic-clips]-a[pistol-magazine]",
       energy_required = 1,
       ingredients = k2pistol,
-      result = "pistol-magazine-bismuth",
-      result_count = 1,
+      results = {{type="item", name="pistol-magazine-bismuth", amount=1}},
       enabled = true,
       icons = {
-        { icon = kr_items_with_variations_icons_path .. "ammo/pistol-ammo-1.png", icon_size = 64},
+        { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
       },
@@ -244,11 +244,10 @@ else
       order = "a[basic-clips]-a[rifle-magazine]",
       energy_required = 1,
       ingredients = k2rifle,
-      result = "rifle-magazine-bismuth",
-      result_count = 1,
+      results = {{type="item", name="rifle-magazine-bismuth", amount=1}},
       enabled = false,
       icons = {
-        { icon = kr_items_with_variations_icons_path .. "ammo/rifle-ammo-1.png", icon_size = 64},
+        { icon = "__Krastorio2Assets__/icons/ammo/rifle-magazine.png", icon_size = 64},
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png",
           icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
       },
@@ -260,8 +259,7 @@ else
       order = "a[shotgun]-a[basic]",
       energy_required = 1,
       ingredients = shotgun,
-      result = "shotgun-shell-bismuth",
-      result_count = 1,
+      results = {{type="item", name="shotgun-shell-bismuth", amount=1}},
       enabled = false,
       icons = {
         { icon = "__base__/graphics/icons/shotgun-shell.png", icon_size = 64},

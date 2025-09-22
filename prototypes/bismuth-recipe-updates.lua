@@ -34,7 +34,7 @@ end
 
 if mods["space-exploration"] then
   util.add_ingredient("se-material-testing-pack", "bismuth-plate", 1)
-  util.add_product("se-scrap-recycling", {name="bismuth-ore", amount=1, probability=0.1})
+  util.add_product("se-scrap-recycling", {type="item", name="bismuth-ore", amount=1, probability=0.1})
   util.add_ingredient("se-space-pipe-to-ground", "bismuth-plate", 2)
   util.add_ingredient("se-space-pipe-to-ground", "lead-plate", 1)
   util.add_ingredient("se-space-pipe-to-ground", "tin-plate", 1)

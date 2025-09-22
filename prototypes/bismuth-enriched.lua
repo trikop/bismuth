@@ -18,7 +18,7 @@ data:extend(
     },
     subgroup = "raw-material",
     order = "e05-a[enriched-ores]-a1[enriched-bismuth]",
-    stack_size = util.get_stack_size(100)
+    stack_size = 100
   },
   {
     type = "recipe",
@@ -43,7 +43,7 @@ data:extend(
     results =
     { 
       {type = "item",  name = "enriched-bismuth", amount = 5 or 6},
-      {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25},
+      {type = "fluid", name = "kr-dirty-water", amount = 25, catalyst_amount = 25},
     },
     crafting_machine_tint =
     {
@@ -70,30 +70,28 @@ data:extend(
       allow_productivity = true,
       ingredients = 
       {
-        {"enriched-bismuth", 5}
+        {type="item", name="enriched-bismuth", amount=5}
       },
-      result = "bismuth-plate",
-      result_count = 12,
+      results = {{type="item", name="bismuth-plate", amount=12}},
       order = "b[bismuth-plate]-b[enriched-bismuth-plate]"
   },	
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-bismuth",
-		category = "fluid-filtration",
+		category = "kr-fluid-filtration",
 		icons =
 		{
 			{
-				icon = data.raw.fluid["dirty-water"].icon,
-				icon_size = data.raw.fluid["dirty-water"].icon_size
+				icon = data.raw.fluid["kr-dirty-water"].icon,
+				icon_size = data.raw.fluid["kr-dirty-water"].icon_size
 			},
 			{
 				icon = data.raw.item["bismuth-ore"].icon,
 				icon_size =	data.raw.item["bismuth-ore"].icon_size,
-				scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size/data.raw.item["bismuth-ore"].icon_size),
+				scale = 0.20 * (64/data.raw.item["bismuth-ore"].icon_size),
 				shift = {0, 4}
 			}
 		},
-		icon_size = data.raw.fluid["dirty-water"].icon_size,
 		energy_required = 2,
 		enabled = false,
 		allow_as_intermediate = false,
@@ -101,7 +99,7 @@ data:extend(
 		always_show_products = true,
 		ingredients =
 		{
-			{type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100},
+			{type = "fluid", name = "kr-dirty-water", amount = 100, catalyst_amount = 100},
 		},
 		results =
 		{
