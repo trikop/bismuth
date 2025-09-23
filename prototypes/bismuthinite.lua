@@ -39,6 +39,10 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
         subgroup = "raw-resource",
         order = "t-c-a",
         stack_size = 50
+        weight = 4.5*kg,
+        inventory_move_sound = item_sounds.wire_inventory_move,
+        pick_sound = item_sounds.wire_inventory_pickup,
+        drop_sound = item_sounds.wire_inventory_move,
       },
     })
     if util.me.get_setting("bismuth-disable-bismuthinite-ore") == false then
