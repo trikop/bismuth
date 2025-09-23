@@ -6,13 +6,13 @@ local prereq = {}
 -- add lime from calcium
 
 if data.raw.item["sand"] and data.raw.item["silica"] and data.raw.item["calcium-plate"] then
-  glass_ingredients = {{"sand", 6}, {"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
+  glass_ingredients = {{type="item", name="sand", amount=6}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="calcium-plate", amount=1}}
 elseif data.raw.item["sand"] and data.raw.item["silica"] then
-  glass_ingredients = {{"sand", 6}, {"silica", 4}, {"bismuth-plate", 2}}
+  glass_ingredients = {{type="item", name="sand", amount=6}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}}
 elseif data.raw.item["sand"] then
-  glass_ingredients = {{"sand", 10}, {"bismuth-plate", 2}}
+  glass_ingredients = {{type="item", name="sand",amount= 10}, {type="item", name="bismuth-plate", amount=2}}
 else
-  glass_ingredients = {{"stone", 5}, {"bismuth-plate", 2}}
+  glass_ingredients = {{type="item", name="stone", amount=5}, {type="item", name="bismuth-plate", amount=2}}
 end
 data:extend({
 {
@@ -22,7 +22,7 @@ data:extend({
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "b[bismuth-glass]",
-    stack_size = util.get_stack_size(100),
+    stack_size = 100,
 },
 {
     type = "recipe",
@@ -65,11 +65,11 @@ end
 
 if mods["space-exploration"] then
   if data.raw.item["silica"] and data.raw.item["calcium-plate"] then
-    glass_ingredients = {{"sand", 22}, {"silica", 4}, {"bismuth-plate", 2}, {"calcium-plate", 1}}
+    glass_ingredients = {{type="item", name="sand", amount=22}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="calcium-plate", amount=1}}
   elseif data.raw.item["silica"] then
-    glass_ingredients = {{"sand", 22}, {"silica", 4}, {"bismuth-plate", 2}}
+    glass_ingredients = {{type="item", name="sand", amount=22}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}}
   else
-    glass_ingredients = {{"sand", 26}, {"bismuth-plate", 2}}
+    glass_ingredients = {{type="item", name="sand", amount=26}, {type="item", name="bismuth-plate", amount=2}}
   end
   data:extend({
   {

@@ -22,7 +22,7 @@ data:extend({
           main_product = util.me.bismuth_plate,
           enabled = true,
           energy_required = 9,
-          ingredients = {{"bismuth-ore", 10}},
+          ingredients = {{type="item", name="bismuth-ore", amount=10}},
           results = {
             {type="item", name = util.me.bismuth_plate, amount=10},
           },
@@ -31,7 +31,7 @@ data:extend({
           main_product = util.me.bismuth_plate,
           enabled = true,
           energy_required = 0.9,
-          ingredients = {{"bismuth-ore", 1}},
+          ingredients = {{type="item", name="bismuth-ore", amount=1}},
           results = {
             {type="item", name = util.me.bismuth_plate, amount=1},
           },
@@ -41,7 +41,7 @@ data:extend({
       main_product = util.me.bismuth_plate,
       enabled = true,
       energy_required = 12.8,
-      ingredients = {{"bismuth-ore", 4}},
+      ingredients = {{type="item", name="bismuth-ore", amount=4}},
       results = {
         {type="item", name = util.me.bismuth_plate, amount=2},
       },
@@ -54,7 +54,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 3,
     subgroup = "raw-material",
     order = "b[bismuth-plate]",
-    stack_size = util.get_stack_size(100)
+    stack_size = 100
   },
   mods["TheBigFurnace"] and {
     type = "recipe",
@@ -67,7 +67,7 @@ data:extend({
     {
       enabled = true,
       energy_required = 5,
-      ingredients = {{"bismuth-ore", 100}},
+      ingredients = {{type="item", name="bismuth-ore", amount=100}},
       results = {
         {type="item", name = util.me.bismuth_plate, amount=100},
       }
@@ -76,7 +76,7 @@ data:extend({
     {
       enabled = true,
       energy_required = 10,
-      ingredients = {{"bismuth-ore", 100}},
+      ingredients = {{type="item", name="bismuth-ore", amount=100}},
       results = {
         {type="item", name = util.me.bismuth_plate, amount=50},
       }
