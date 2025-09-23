@@ -1,6 +1,8 @@
 local resource_autoplace = require("resource-autoplace");
 local util = require("__bismuth__.data-util");
 local fluid = {}
+local item_sounds = require('__base__.prototypes.item_sounds')
+
 
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["bismuth-ore"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["bismuth-ore"] = {}
@@ -38,7 +40,7 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
         },
         subgroup = "raw-resource",
         order = "t-c-a",
-        stack_size = 50
+        stack_size = 50,
         weight = 4.5*kg,
         inventory_move_sound = item_sounds.wire_inventory_move,
         pick_sound = item_sounds.wire_inventory_pickup,

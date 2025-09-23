@@ -18,23 +18,12 @@ data:extend({
           { icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3, },
         }),
     main_product = util.me.bismuth_plate,
-    mods["Krastorio2"] and
-         {
-           enabled = true,
-           energy_required = 9,
-           ingredients = {util.item("bismuth-ore", 10)},
-           results = {
-             {type="item", name = util.me.bismuth_plate, amount=10},
-           },
-         } or
-        {
-          enabled = true,
-          allow_productivity = true,
-          energy_required = 0.9,
-          ingredients = {util.item("bismuth-ore", 1)},
-          results = {
-            {type="item", name = util.me.bismuth_plate, amount=1},
-          },
+    enabled = true,
+    allow_productivity = true,
+    energy_required = 0.9,
+    ingredients = {util.item("bismuth-ore", 1)},
+    results = {
+      {type="item", name = util.me.bismuth_plate, amount=1},
         },
     },
   {
