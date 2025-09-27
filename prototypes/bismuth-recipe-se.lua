@@ -2,11 +2,11 @@
 local util = require("data-util");
 
 if mods["space-exploration"] then
-  se_delivery_cannon_recipes[util.me.bismuth_ore] = {name= util.me.bismuth_ore}
+  se_delivery_cannon_recipes[util.me.bismuth_ore] = {name= "bismuth_ore"}
   se_delivery_cannon_recipes[util.me.bismuth_plate] = {name= util.me.bismuth_plate}
   util.se_landfill({ore="bismuth-ore"})
 
-if string.sub(mods["space-exploration"], 1, 3) == "0.7" then
+if util.se6() then
   util.se_matter({ore="bismuth-ore", energy_required=1, quant_out=10, stream_out=60})
   data:extend({
   {
@@ -51,7 +51,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.7" then
     },
     energy_required = 60,
     ingredients = {
-      {type = "item", name = mods.Krastorio2 and "enriched-bismuth" or "bismuth-ore", amount = 24},
+      {type= "item", name = util.k2() and "enriched-bismuth" or "bismuth-ore", amount = 24},
       {type = "fluid", name = "se-pyroflux", amount = 10},
     },
     enabled = false,
