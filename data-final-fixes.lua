@@ -74,3 +74,32 @@ if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false
         util.add_product("se-core-fragment-bismuth-ore", {type="item", name="sulfur", amount=1, probability=0.742})
     end
 end
+
+-- Deadlock stacking recipes
+
+if deadlock_stacking then
+  deadlock.add_stack("bismuth-ore",  "__bismuth__/graphics/icons/stacked/bismuth-ore-stacked.png", "deadlock-stacking-1", 64)
+  deadlock.add_stack("bismuth-plate",  "__bismuth__/graphics/icons/stacked/bismuth-plate-stacked.png", "deadlock-stacking-1", 64)
+  deadlock.add_stack("bismuth-glass",  "__bismuth__/graphics/icons/stacked/bismuth-glass-stacked.png", "deadlock-stacking-1", 64)
+
+  if mods.Krastorio2 then
+    deadlock.add_stack("enriched-bismuth", "__bismuth__/graphics/icons/stacked/enriched-bismuth-stacked.png" , "deadlock-stacking-3", 64)
+  end
+  if mods["space-exploration"] then
+    deadlock.add_stack("bismuth-ingot", "__bismuth__/graphics/icons/stacked/bismuth-ingot-stacked.png", "deadlock-stacking-2", 64)
+  end
+end
+
+-- Deadlock crating recipes
+if deadlock_crating then
+  deadlock_crating.add_crate("bismuth-ore", "deadlock-crating-1")
+  deadlock_crating.add_crate("bismuth-plate", "deadlock-crating-1")
+  if mods.Krastorio2 then
+    deadlock_crating.add_crate("enriched-bismuth", "deadlock-crating-2")
+  end
+  if mods["space-exploration"] then
+    deadlock_crating.add_crate("bismuth-ingot", "deadlock-crating-2")
+  end
+end
+
+
