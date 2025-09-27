@@ -64,13 +64,6 @@ if mods.bzcarbon then
 end
 
 if mods["space-exploration"] then
-  if data.raw.item["silica"] and data.raw.item["calcium-plate"] then
-    glass_ingredients = {{type="item", name="sand", amount=22}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="calcium-plate", amount=1}}
-  elseif data.raw.item["silica"] then
-    glass_ingredients = {{type="item", name="sand", amount=22}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}}
-  else
-    glass_ingredients = {{type="item", name="sand", amount=26}, {type="item", name="bismuth-plate", amount=2}}
-  end
   data:extend({
   {
       type = "recipe",
@@ -79,15 +72,32 @@ if mods["space-exploration"] then
       order = "d[bismuth-glass]",
       enabled = false,
       energy_required = 1,
-      ingredients = glass_ingredients, 
+      ingredients = {{type="item", name="bismuth-plate", amount=2}},
       results = {{type = "item", name = "bismuth-glass", amount = 7}},
       icons =
       {
         { icon = icon, icon_size = 128},
         { icon = "__space-exploration-graphics__/graphics/icons/fluid/pyroflux.png", icon_size = 64, scale=0.25, shift= {-10, -10}},
       },
+
   },
   })
+  if mods.Krastorio2 then
+    util.add_or_add_to_ingredient("se-bismuth-glass", "kr-sand", 22)
+  else
+    util.add_or_add_to_ingredient("se-bismuth-glass", "sand", 22)
+  end
+  if data.raw.item["silica"] then
+    util.add_or_add_to_ingredient("se-bismuth-glass", "silica", 4)
+  elseif mods.Krastorio2 then
+    util.add_or_add_to_ingredient("se-bismuth-glass", "kr-sand", 4)
+  else
+    util.add_or_add_to_ingredient("se-bismuth-glass", "sand", 4)
+  end
+  if data.raw.item["calcium-plate"] then
+    util.add_or_add_to_ingredient("se-bismuth-glass", "calcium-plate", 1)
+  end
+  
   util.add_effect("se-pyroflux-smelting", {type = "unlock-recipe", recipe= "se-bismuth-glass"})
   util.add_ingredient("se-bismuth-glass", {type = "fluid", name = "se-pyroflux", amount = 10})
 
