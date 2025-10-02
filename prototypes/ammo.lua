@@ -1,6 +1,9 @@
+local util = require("data-util");
+
 local damagemagazine = {}
-local namefirearm
-if mods.Krastorio2 then
+local namefirearm = {}
+
+if util.k2() then
   namefirearm = "pistol-magazine-bismuth"
   damagemagazine = { amount = 7, type = "physical"}
 else
@@ -104,7 +107,7 @@ data:extend({
     ammo_category = "bullet"
   },
 })
-if mods.Krastorio2 then
+if util.k2() then
   data:extend({
     {
       type = "ammo",
@@ -161,33 +164,33 @@ local shotgun = {}
 local k2pistol = {}
 local k2rifle = {}
 
-if mods.BrassTacks then
+if mods["BrassTacks-updated"] then
   magazine = {{type="item", name="bismuth-plate", amount=3}, {type="item", name="brass-plate", amount=1}}
 else
   magazine = {{type="item", name="bismuth-plate", amount=3}, {type="item", name="iron-plate", amount=1}}
 end
 
-if mods.BrassTacks and mods.bzchlorine then
+if mods["BrassTacks-updated"] and mods.bzchlorine then
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}, {type="item", name="salt", amount=1}}
-elseif mods.BrassTacks then
+elseif mods["BrassTacks-updated"] then
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}}
 else
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="iron-plate", amount=1}}
 end
 
-if mods.BrassTacks then
+if mods["BrassTacks-updated"] then
   k2pistol = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=1}, {type="item", name="brass-plate", amount=1}}
 else
   k2pistol = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=1}}
 end
 
-if mods.BrassTacks then
+if mods["BrassTacks-updated"] then
   k2rifle = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}}
 else
   k2rifle = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=2},{type="item", name="copper-plate", amount=1}}
 end
 
-if not mods.Krastorio2 then
+if not util.k2() then
   data:extend({
     {
       type = "recipe",

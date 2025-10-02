@@ -2,7 +2,7 @@
 --
 local util = require("__bismuth__.data-util");
 
-if mods.Krastorio2 then
+if util.k2() then
   util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-bismuth"})
 else
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-bismuth"})
@@ -14,9 +14,9 @@ util.add_ingredient("pipe-to-ground", "lead-plate", 1)
 util.add_ingredient("pipe-to-ground", "tin-plate", 1)
 util.remove_ingredient("pipe-to-ground", "solder")
 
-if mods.Krastorio2 then
-  util.add_effect("kr-basic-fluid-handling", {type = "unlock-recipe", recipe = "bismuth-plate"})
-  util.add_unlock_force("kr-basic-fluid-handling", "bismuth-plate")
+if util.k2() then
+  util.add_effect("steam-power", {type = "unlock-recipe", recipe = "bismuth-plate"})
+  util.add_unlock_force("steam-power", "bismuth-plate")
 else
   util.add_effect("automation", {type = "unlock-recipe", recipe = "bismuth-plate"})
   util.add_unlock_force("automation", "bismuth-plate")
@@ -25,7 +25,7 @@ end
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
 end
 
-if mods.Krastorio2 then
+if util.k2() then
   util.add_ingredient("kr-steel-pipe-to-ground", "bismuth-plate", 2)
   util.add_ingredient("kr-steel-pipe-to-ground", "lead-plate", 1)
   util.add_ingredient("kr-steel-pipe-to-ground", "tin-plate", 1)
@@ -39,7 +39,7 @@ if mods["space-exploration"] then
   util.add_ingredient("se-space-pipe-to-ground", "lead-plate", 1)
   util.add_ingredient("se-space-pipe-to-ground", "tin-plate", 1)
   data.raw.item["se-space-thermodynamics-laboratory"].ingredient_count = 24, --made it 24, so it won't conflict with another mod hopefully xD
-  util.add_ingredient("se-experimental-alloys-data","bismuth-plate", 1)
+  util.add_ingredient("se-experimental-alloys-data", "bismuth-plate", 1)
 end
 
 if mods.FluidMustFlow then

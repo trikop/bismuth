@@ -58,7 +58,7 @@ if mods["space-exploration"] then
     end
 end
 
-if mods.Krastorio2 then
+if util.k2() then
     util.add_ingredient("logistic-science-pack","pcb-solder", 5)
     util.add_ingredient("chemical-science-pack","pcb-solder", 5)
     util.add_ingredient("military-science-pack","pcb-solder", 5)
@@ -71,7 +71,7 @@ if mods.Krastorio2 then
     util.add_ingredient("kr-superior-splitter","pcb-solder", 1)
 end
 
-if mods.Krastorio2 and mods["space-exploration"] then
+if util.k2() and mods["space-exploration"] then
     util.add_ingredient("se-rocket-science-pack","pcb-solder", 8)
     util.add_ingredient("space-research-data","pcb-solder", 3)
 end

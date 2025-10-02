@@ -47,7 +47,7 @@ if util.se6() then
     main_product = "molten-bismuth",
     subgroup = "bismuth",
     results = {
-      {type = "fluid", name = "molten-bismuth", amount = mods.Krastorio2 and 750 or 900},
+      {type = "fluid", name = "molten-bismuth", amount = util.k2() and 750 or 900},
     },
     energy_required = 60,
     ingredients = {
@@ -100,7 +100,7 @@ if util.se6() then
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "molten-bismuth"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "bismuth-ingot"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "bismuth-ingot-to-plate"})
-  if mods["Krastorio2"] then
+  if util.k2() then
     util.set_item_subgroup("enriched-bismuth", "bismuth")
     data.raw.recipe["enriched-bismuth-plate"].order= "d[bismuth-plate]"
     se_delivery_cannon_recipes["enriched-bismuth"] = {name= "enriched-bismuth"}
@@ -108,7 +108,7 @@ if util.se6() then
   se_delivery_cannon_recipes["bismuth-ingot"] = {name="bismuth-ingot"}
 else
   data.raw.item["bismuth-plate"].subgroup = "plates"
-  if mods["Krastorio2"] then
+  if util.k2() then
     data:extend({
     {
       type = "recipe",

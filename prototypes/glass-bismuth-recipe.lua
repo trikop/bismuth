@@ -82,14 +82,14 @@ if mods["space-exploration"] then
 
   },
   })
-  if mods.Krastorio2 then
+  if util.k2() then
     util.add_or_add_to_ingredient("se-bismuth-glass", "kr-sand", 22)
   else
     util.add_or_add_to_ingredient("se-bismuth-glass", "sand", 22)
   end
   if data.raw.item["silica"] then
     util.add_or_add_to_ingredient("se-bismuth-glass", "silica", 4)
-  elseif mods.Krastorio2 then
+  elseif util.k2() then
     util.add_or_add_to_ingredient("se-bismuth-glass", "kr-sand", 4)
   else
     util.add_or_add_to_ingredient("se-bismuth-glass", "sand", 4)

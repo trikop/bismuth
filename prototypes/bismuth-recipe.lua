@@ -10,7 +10,7 @@ data:extend({
     name = util.me.bismuth_plate,
     category = "smelting",
     order = "d[bismuth-plate]",
-    icons = (mods["Krastorio2"] and
+    icons = (util.k2() and
         {
           { icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3, },
           { icon = "__bismuth__/graphics/icons/bismuth-ore.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
@@ -21,11 +21,15 @@ data:extend({
     enabled = true,
     allow_productivity = true,
     energy_required = 0.9,
-    ingredients = {util.item("bismuth-ore", 1)},
+    ingredients = (util.k2() and {util.item("bismuth-ore", 10)} or {util.item("bismuth-ore", 1)}),
     results = {
-      {type="item", name = util.me.bismuth_plate, amount=1},
-        },
+      {
+        type="item",
+        name = util.me.bismuth_plate,
+        amount= util.k2() and 10 or 1
+      },
     },
+  },
   {
     type = "item",
     name = util.me.bismuth_plate,

@@ -1,7 +1,7 @@
 -- Enriched Bismuth for Krastorio2
 local util = require("data-util");
 
-if mods["Krastorio2"] then
+if util.k2() then
 data:extend(
 {
   {

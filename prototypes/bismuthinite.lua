@@ -13,7 +13,7 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
 
   if mods.bzchlorine then
     fluid = "chlorine"
-  elseif mods.Krastorio2 then
+  elseif util.k2() then
     fluid = "kr-chlorine"
   else
     fluid = "water"

@@ -8,7 +8,7 @@ require("prototypes/compat/rubber-n-resin")
 
 local util = require("__bismuth__.data-util");
 if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false then
-    if mods.Krastorio2 then
+    if util.k2() then
         util.add_product("copper-plate", {type="item", name="bismuth-plate", amount=1, probability=0.2})
         util.add_product("enriched-copper", {type="item", name="bismuth-ore", amount=1, probability=0.33})
         util.add_or_add_to_ingredient("copper-plate", "copper-ore", 2)
@@ -37,7 +37,7 @@ if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false
             util.add_product("gold-ingot", {type="item", name="bismuth-ore", amount=1, probability=0.1})
             util.add_product("enriched-gold", {type="item", name="bismuth-ore", amount=1, probability=0.265})
         end
-        if mods.BrassTacks then
+        if mods["BrassTacks-updated"] then
             util.add_product("zinc-plate", {type="item", name="bismuth-plate", amount=1, probability=0.06})
             util.set_main_product("zinc-plate", "zinc-plate")
             util.add_product("enriched-zinc", {type="item", name="bismuth-ore", amount=1, probability=0.09})
@@ -58,7 +58,7 @@ if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false
             util.set_main_product("silver-plate", "silver-plate")
             util.add_product("gold-ingot", {type="item", name="bismuth-ore", amount=1, probability=0.01})
         end
-        if mods.BrassTacks then
+        if mods["BrassTacks-updated"] then
             util.add_product("zinc-plate", {type="item", name="bismuth-plate", amount=1, probability=0.006})
             util.set_main_product("zinc-plate", "zinc-plate")
         end

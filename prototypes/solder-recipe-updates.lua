@@ -70,9 +70,9 @@ if util.me.get_setting("bismuth-reduce-pcb-solder") == "Default (reccomended)" t
     util.add_ingredient("satellite","pcb-solder", 50)
 end
 
-if mods.Krastorio2 then
+if util.k2() then
     util.set_tech_recipe("pcb-solder", {{"kr-basic-tech-card", 1},{"automation-science-pack", 1}})
-    util.add_prerequisite("pcb-solder", "kr-basic-fluid-handling")
+    util.add_prerequisite("pcb-solder", "steam-power")
     util.add_ingredient("ai-core","pcb-solder", 2)
     util.add_ingredient("kr-advanced-assembling-machine","pcb-solder", 5)
     util.add_ingredient("kr-superior-inserter","pcb-solder", 1)
