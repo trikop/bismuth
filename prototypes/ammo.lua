@@ -164,27 +164,27 @@ local shotgun = {}
 local k2pistol = {}
 local k2rifle = {}
 
-if mods["BrassTacks-updated"] then
+if mods["BrassTacks-Updated"] then
   magazine = {{type="item", name="bismuth-plate", amount=3}, {type="item", name="brass-plate", amount=1}}
 else
   magazine = {{type="item", name="bismuth-plate", amount=3}, {type="item", name="iron-plate", amount=1}}
 end
 
-if mods["BrassTacks-updated"] and mods.bzchlorine then
+if mods["BrassTacks-Updated"] and mods.bzchlorine then
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}, {type="item", name="salt", amount=1}}
-elseif mods["BrassTacks-updated"] then
+elseif mods["BrassTacks-Updated"] then
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}}
 else
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="iron-plate", amount=1}}
 end
 
-if mods["BrassTacks-updated"] then
+if mods["BrassTacks-Updated"] then
   k2pistol = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=1}, {type="item", name="brass-plate", amount=1}}
 else
   k2pistol = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=1}}
 end
 
-if mods["BrassTacks-updated"] then
+if mods["BrassTacks-Updated"] then
   k2rifle = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}}
 else
   k2rifle = {{type="item", name="coal", amount=1}, {type="item", name="bismuth-plate", amount=2},{type="item", name="copper-plate", amount=1}}

@@ -1,7 +1,7 @@
 -- Matter recipes for Krastorio2
 
-local util = require("__bismuth__.data-util");
-if util.k2() then
+local util = require("data-util");
+if mods["Krastorio2"] or mods["Krastorio2-spaced-out"] then
   local matter = require("__Krastorio2__/prototypes/libraries/matter")
   data:extend(
   {

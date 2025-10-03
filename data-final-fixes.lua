@@ -37,7 +37,7 @@ if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false
             util.add_product("gold-ingot", {type="item", name="bismuth-ore", amount=1, probability=0.1})
             util.add_product("enriched-gold", {type="item", name="bismuth-ore", amount=1, probability=0.265})
         end
-        if mods["BrassTacks-updated"] then
+        if mods["BrassTacks-Updated"] then
             util.add_product("zinc-plate", {type="item", name="bismuth-plate", amount=1, probability=0.06})
             util.set_main_product("zinc-plate", "zinc-plate")
             util.add_product("enriched-zinc", {type="item", name="bismuth-ore", amount=1, probability=0.09})
@@ -58,7 +58,7 @@ if util.me.get_setting("bismuth-disable-bismuth-as-smelting-byproduct") == false
             util.set_main_product("silver-plate", "silver-plate")
             util.add_product("gold-ingot", {type="item", name="bismuth-ore", amount=1, probability=0.01})
         end
-        if mods["BrassTacks-updated"] then
+        if mods["BrassTacks-Updated"] then
             util.add_product("zinc-plate", {type="item", name="bismuth-plate", amount=1, probability=0.006})
             util.set_main_product("zinc-plate", "zinc-plate")
         end
