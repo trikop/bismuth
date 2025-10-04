@@ -71,7 +71,7 @@ if util.me.get_setting("bismuth-reduce-pcb-solder") == "Default (reccomended)" t
 end
 
 if util.k2() then
-    util.set_tech_recipe("pcb-solder", {{"kr-basic-tech-card", 1},{"automation-science-pack", 1}})
+
     util.add_prerequisite("pcb-solder", "steam-power")
     util.add_ingredient("ai-core","pcb-solder", 2)
     util.add_ingredient("kr-advanced-assembling-machine","pcb-solder", 5)
@@ -104,6 +104,9 @@ if util.k2() then
         util.add_ingredient("kr-big-requester-container","pcb-solder", 40)
 
         util.add_ingredient("biusart-lab","pcb-solder", 10)
+    end
+    if mods["space-exploration"] then
+        util.set_tech_recipe("pcb-solder", {{"kr-basic-tech-card", 1},{"automation-science-pack", 1}})
     end
 end
 

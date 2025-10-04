@@ -79,7 +79,7 @@ function util.se6()
 end
 
 function util.k2()
-  return mods["Krastorio2"] or mods["Krastorio2-spaced-out"]
+  return mods.Krastorio2 or mods["Krastorio2-spaced-out"]
 end
 
 util.cablesg = util.se6() and "electronic" or "cable"
@@ -517,7 +517,7 @@ end
 -- params: {k2matter}, k2baseicon , {icon}
 function util.k2matter(params)
   local matter
-  if util.k2() then
+  if mods.Krastorio2 then
     matter = require("__Krastorio2__/prototypes/libraries/matter")
   else
     matter = require("__Krastorio2-spaced-out__/prototypes/libraries/matter")
@@ -532,6 +532,7 @@ function util.k2matter(params)
     else
       icon = util.k2assets().."/technologies/backgrounds/matter.png"
     end
+    
     
     data:extend(
         {

@@ -1,62 +1,69 @@
 -- Matter recipes for Krastorio2
-
 local util = require("data-util");
-if mods["Krastorio2"] or mods["Krastorio2-spaced-out"] then
-  local matter = require("__Krastorio2__/prototypes/libraries/matter")
-  data:extend(
+if util.k2() then
+
+data:extend(
+{
   {
+    type = "technology",
+    name = "bismuth-matter-processing",
+    icons =
     {
-      type = "technology",
-      name = "bismuth-matter-processing",
-      icons =
       {
-        {
-          icon = util.k2assets().."/technologies/matter-stone.png",
-          icon_size = 256,
-        },
-        {
-          icon = "__bismuth__/graphics/icons/bismuth-ore.png",
-          icon_size = 64, icon_mipmaps = 3,
-          scale = 1.25,
-        }
+        icon = util.k2assets().."/technologies/matter-stone.png",
+        icon_size = 256,
       },
-      prerequisites = {"kr-matter-processing"},
-      unit =
       {
-        count = 350,
-        ingredients =
-        {
-          {"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"kr-matter-tech-card", 1}
-        },
-        time = 45
+        icon = "__bismuth__/graphics/icons/bismuth-ore.png",
+        icon_size = 64, icon_mipmaps = 3,
+        scale = 1.25,
       }
     },
-  })
-
-  local bismuth_matter =
-    {
-      material = { type = "item", name = "bismuth-ore", amount = 10 },
-      item_name = "bismuth-ore",
-      matter_count = 5,
-      energy_required = 1,
-      need_stabilizer = false,
-      unlocked_by_technology = "bismuth-matter-processing"
+    effects = {},
+    prerequisites = {"kr-matter-processing"},
+    unit =
+  	{
+      count = 350,
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"kr-matter-tech-card", 1}
+      },
+      time = 45
     }
-  matter.make_recipes(bismuth_matter)
+  },
+})
 
+util.k2matter({
+	k2matter = {
+    material = {
+      name = "bismuth-ore",
+      type = "item",
+      amount = 10,
+    },
+    matter_count = 5,
+    energy_required = 1,
+    needs_stabilizer = false,
+    allow_productivity = true,
+    unlocked_by = "bismuth-matter-processing"
+	}
+})
 
-  local bismuth_plate_matter =
-    {
-      material = { type = "item", name = "bismuth-plate", amount = 10 },
-      item_name = "bismuth-plate",
-      matter_count = 7.5,
-      energy_required = 2,
-      only_deconversion = true,
-      need_stabilizer = true,
-      unlocked_by_technology = "bismuth-matter-processing"
-    }
-  matter.make_recipes(bismuth_plate_matter)
+util.k2matter({
+	k2matter = {
+    material = {
+      name = "bismuth-plate",
+      type = "item",
+      amount = 10,
+    },
+    matter_count = 7.5,
+    energy_required = 2,
+    needs_stabilizer = true,
+    allow_productivity = true,
+    only_deconversion = true,
+    unlocked_by = "bismuth-matter-processing"
+	}
+})
 
 end

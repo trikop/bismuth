@@ -37,13 +37,13 @@ data:extend(
     ingredients =
     {
       {type = "fluid", name = "sulfuric-acid", amount = 3},
-      {type = "fluid", name = "water", amount = 25, catalyst_amount = 25},
+      {type = "fluid", name = "water", amount = 25, ignored_by_stats=25, ignored_by_productivity=25},
       {type = "item",  name = "bismuth-ore", amount = 9}
     },
     results =
     { 
       {type = "item",  name = "enriched-bismuth", amount = 5 or 6},
-      {type = "fluid", name = "kr-dirty-water", amount = 25, catalyst_amount = 25},
+      {type = "fluid", name = "kr-dirty-water", amount = 25, ignored_by_stats=25, ignored_by_productivity=25},
     },
     crafting_machine_tint =
     {
@@ -74,7 +74,7 @@ data:extend(
       },
       results = {{type="item", name="bismuth-plate", amount=12}},
       order = "b[bismuth-plate]-b[enriched-bismuth-plate]"
-  },	
+  },
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-bismuth",
@@ -99,11 +99,11 @@ data:extend(
 		always_show_products = true,
 		ingredients =
 		{
-			{type = "fluid", name = "kr-dirty-water", amount = 100, catalyst_amount = 100},
+	    {type = "fluid", name = "kr-dirty-water", amount = 100, ignored_by_stats=100, ignored_by_productivity=100},
 		},
 		results =
 		{
-			{type = "fluid", name = "water", amount = 90, catalyst_amount = 90},
+			{type = "fluid", name = "water", amount = 90, ignored_by_stats=90, ignored_by_productivity=90},
 			{type = "item",  name = "stone", probability = 0.30, amount = 1},
 			{type = "item",  name = "bismuth-ore", probability = 0.50, amount = 1},
 		},
