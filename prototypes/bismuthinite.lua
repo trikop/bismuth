@@ -11,10 +11,10 @@ resource_autoplace.initialize_patch_set("bismuth-ore", true)
 local bismuth_contain_bismuth = util.me.get_setting("bismuth-contain-bismuth") / 10000
 local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 10000
 
-  if mods.bzchlorine then
-    fluid = "chlorine"
-  elseif util.k2() then
+  if util.k2() then
     fluid = "kr-chlorine"
+  elseif mods.bzchlorine then
+    fluid = "chlorine"
   else
     fluid = "water"
   end
