@@ -5,12 +5,12 @@ local icon = "__bismuth__/graphics/icons/glass.png"
 local prereq = {}
 -- add lime from calcium
 
-if data.raw.item["sand"] and data.raw.item["silica"] and data.raw.item["calcium-plate"] then
-  glass_ingredients = {{type="item", name="sand", amount=6}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="calcium-plate", amount=1}}
-elseif data.raw.item["sand"] and data.raw.item["silica"] then
-  glass_ingredients = {{type="item", name="sand", amount=6}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}}
-elseif data.raw.item["sand"] then
-  glass_ingredients = {{type="item", name="sand",amount= 10}, {type="item", name="bismuth-plate", amount=2}}
+if data.raw.item[mods["Krastorio2"] and "kr-sand" or "sand"] and data.raw.item["silica"] and data.raw.item["calcium-plate"] then
+  glass_ingredients = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=6}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="calcium-plate", amount=1}}
+elseif data.raw.item[mods["Krastorio2"] and "kr-sand" or "sand"] and data.raw.item["silica"] then
+  glass_ingredients = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=6}, {type="item", name="silica", amount=4}, {type="item", name="bismuth-plate", amount=2}}
+elseif data.raw.item[mods["Krastorio2"] and "kr-sand" or "sand"] then
+  glass_ingredients = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand",amount= 10}, {type="item", name="bismuth-plate", amount=2}}
 else
   glass_ingredients = {{type="item", name="stone", amount=5}, {type="item", name="bismuth-plate", amount=2}}
 end

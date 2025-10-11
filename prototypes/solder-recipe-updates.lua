@@ -156,7 +156,7 @@ else
     util.add_ingredient("processing-unit","pcb-solder", 23)
 end
 
-if mods.MDbobelectronics then
+if mods.MDbobelectronics or mods.MDbobelectronics2 then
     util.add_ingredient("advanced-processing-unit", "pcb-solder", 4)
     util.remove_ingredient("advanced-processing-unit", "solder")
     util.add_ingredient("BOBMD-electronics-components", "pcb-solder", 2)
