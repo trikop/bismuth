@@ -1,6 +1,6 @@
 {
     "name": "bismuth",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "title": "Bismuth",
     "author": "trikop, cackling fiend",
     "factorio_version": "2.0",
@@ -16,7 +16,7 @@
         "? BrassTacks-Updated >= 2.4.7",
         "? FluidMustFlow >= 1.4.4",
         "? bzsilicon >= 2.0.18",
-        "? MDbobelectronics >= 3.6.0",
+        "? MDbobelectronics2 >= 4.0.3",
         "? rubber-n-resin >= 0.1.3"
     ]
 }
