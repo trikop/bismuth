@@ -49,7 +49,7 @@ if util.me.get_setting("bismuth-reduce-pcb-solder") == "Default (reccomended)" t
 
     util.add_ingredient("personal-battery","pcb-solder", 1)
     util.add_ingredient("solar-panel-equipment","pcb-solder", 2)
-    util.add_ingredient("nuclear-reactor-equipment","pcb-solder", 50)
+    util.add_ingredient("fission-reactor-equipment","pcb-solder", 50)
     util.add_ingredient("night-vision-equipment","pcb-solder", 2)
     util.add_ingredient("energy-shield-equipment","pcb-solder", 5)
     util.add_ingredient("defender-capsule","pcb-solder", 3)
