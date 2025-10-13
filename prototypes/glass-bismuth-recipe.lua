@@ -1,5 +1,6 @@
 local util = require("data-util");
 
+local glass_name = util.k2() and "kr-glass" or "glass"
 local glass_ingredients = {}
 local icon = "__bismuth__/graphics/icons/glass.png"
 local prereq = {}
@@ -57,7 +58,7 @@ util.add_unlock_force("bismuth-glass", "bismuth-glass")
 
 util.add_ingredient("low-density-structure", "bismuth-glass", 4)
 util.add_ingredient("satellite", "bismuth-glass", 100)
-util.remove_ingredient("satellite", "glass")
+util.remove_ingredient("satellite", glass_name)
 
 if mods.bzcarbon then
   util.add_ingredient("low-density-structure-nanotubes", "bismuth-glass", 4)
@@ -102,17 +103,17 @@ if mods["space-exploration"] then
   util.add_ingredient("se-bismuth-glass", {type = "fluid", name = "se-pyroflux", amount = 10})
 
   util.add_ingredient("se-low-density-structure-beryllium", "bismuth-glass", 2)
-  util.remove_ingredient("se-low-density-structure-beryllium", "glass")
+  util.remove_ingredient("se-low-density-structure-beryllium", glass_name)
   util.add_ingredient("se-spaceship-console", "bismuth-glass", 20)
-  util.remove_ingredient("se-spaceship-console", "glass")
+  util.remove_ingredient("se-spaceship-console", glass_name)
   util.add_ingredient("se-space-laser-laboratory", "bismuth-glass", 80)
-  util.remove_ingredient("se-space-laser-laboratory", "glass")
+  util.remove_ingredient("se-space-laser-laboratory", glass_name)
   util.add_ingredient("se-space-radiation-laboratory", "bismuth-glass", 80)
-  util.remove_ingredient("se-space-radiation-laboratory", "glass")
+  util.remove_ingredient("se-space-radiation-laboratory", glass_name)
   util.add_ingredient("se-space-telescope", "bismuth-glass", 40)
-  util.remove_ingredient("se-space-telescope", "glass")
+  util.remove_ingredient("se-space-telescope", glass_name)
   util.add_ingredient("se-space-telescope-microwave", "bismuth-glass", 80)
-  util.remove_ingredient("se-space-telescope-microwave", "glass")
+  util.remove_ingredient("se-space-telescope-microwave", glass_name)
 end
 
 if mods.bzfoundry and data.raw.item["foundry"] then
