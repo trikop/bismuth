@@ -43,31 +43,5 @@ data:extend({
     pick_sound = item_sounds.metal_small_inventory_pickup,
     drop_sound = item_sounds.metal_small_inventory_move,
   },
-  mods["TheBigFurnace"] and {
-    type = "recipe",
-    name = "big-bismuth-plate",
-    icons = { { icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64 }, },
-    subgroup = "raw-material",
-    category = "big-smelting",
-    order = "d[bismuth-plate]",
-    normal =
-    {
-      enabled = true,
-      energy_required = 5,
-      ingredients = {{type="item", name="bismuth-ore", amount=100}},
-      results = {
-        {type="item", name = util.me.bismuth_plate, amount=100},
-      }
-    },
-    expensive =
-    {
-      enabled = true,
-      energy_required = 10,
-      ingredients = {{type="item", name="bismuth-ore", amount=100}},
-      results = {
-        {type="item", name = util.me.bismuth_plate, amount=50},
-      }
-    }
-  } or nil,
 })
 end
