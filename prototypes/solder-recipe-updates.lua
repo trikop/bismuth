@@ -10,9 +10,7 @@ util.add_ingredient("assembling-machine-3","pcb-solder", 8)
 util.add_ingredient("inserter","solder", 1)
 util.add_ingredient("long-handed-inserter","solder", 1)
 util.add_ingredient("fast-inserter","pcb-solder", 2)
-util.add_ingredient("filter-inserter","pcb-solder", 2)
-util.add_ingredient("stack-inserter","pcb-solder", 2)
-util.add_ingredient("stack-filter-inserter","pcb-solder", 4)
+util.add_ingredient("bulk-inserter","pcb-solder", 2)
 util.add_ingredient("fast-transport-belt","pcb-solder", 1)
 util.add_ingredient("express-transport-belt","pcb-solder", 1)
 util.add_ingredient("fast-splitter","pcb-solder", 2)
@@ -49,7 +47,7 @@ if util.me.get_setting("bismuth-reduce-pcb-solder") == "Default (reccomended)" t
 
     util.add_ingredient("personal-battery","pcb-solder", 1)
     util.add_ingredient("solar-panel-equipment","pcb-solder", 2)
-    util.add_ingredient("nuclear-reactor-equipment","pcb-solder", 50)
+    util.add_ingredient("fission-reactor-equipment","pcb-solder", 50)
     util.add_ingredient("night-vision-equipment","pcb-solder", 2)
     util.add_ingredient("energy-shield-equipment","pcb-solder", 5)
     util.add_ingredient("defender-capsule","pcb-solder", 3)
@@ -77,8 +75,6 @@ if util.k2() then
     util.add_ingredient("kr-advanced-assembling-machine","pcb-solder", 5)
     util.add_ingredient("kr-superior-inserter","pcb-solder", 1)
     util.add_ingredient("kr-superior-long-inserter","pcb-solder", 1)
-    util.add_ingredient("kr-superior-filter-inserter","pcb-solder", 2)
-    util.add_ingredient("kr-superior-long-filter-inserter","pcb-solder", 2)
     if util.me.get_setting("bismuth-reduce-pcb-solder") == "Default (reccomended)" then
         util.add_ingredient("kr-advanced-radar","pcb-solder", 5)
 
