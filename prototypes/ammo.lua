@@ -170,7 +170,7 @@ else
   magazine = {{type="item", name="bismuth-plate", amount=3}, {type="item", name="iron-plate", amount=1}}
 end
 
-if mods["BrassTacks-Updated"] and mods.bzchlorine then
+if mods["BrassTacks-Updated"] and mods.bzchlorine2 then
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}, {type="item", name="salt", amount=1}}
 elseif mods["BrassTacks-Updated"] then
   shotgun = {{type="item", name="stone", amount=1}, {type="item", name="bismuth-plate", amount=2}, {type="item", name="brass-plate", amount=1}}

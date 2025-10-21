@@ -10,12 +10,15 @@
         "? Krastorio2 >= 2.0.8",
         "? Krastorio2-spaced-out >= 1.4.24",
         "? bzlead >= 2.0.28",
+        "? bzlead2 >= 2.0.29",
         "? bztin >= 2.1.15",
-        "? bzchlorine >= 0.1.4",
-        "? bzgold >= 0.0.14",
+        "? bztin2 >= 2.1.16",
+        "? bzchlorine2 >= 2.0.0",
+        "? bzgold2 >= 2.0.0",
         "? BrassTacks-Updated >= 2.4.7",
         "? FluidMustFlow >= 1.4.4",
         "? bzsilicon >= 2.0.18",
+        "? bzsilicon2 >= 2.0.19",
         "? MDbobelectronics2 >= 4.0.3",
         "? rubber-n-resin >= 0.1.3"
     ]

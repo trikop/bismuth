@@ -1,6 +1,6 @@
 local util = require("__bismuth__.data-util");
 
-if mods.bzfoundry then
+if mods.bzfoundry2 then
     util.add_prerequisite("pcb-solder", "foundry")
 end
 
@@ -127,7 +127,7 @@ if mods["aai-containers"] then
     end
 end
 
-if mods.bztin then
+if (mods["bztin"] or mods["bztin2"]) then
     util.remove_ingredient("processing-unit", "solder")
     util.remove_ingredient("advanced-circuit", "solder")
     util.add_ingredient("advanced-circuit","pcb-solder", 4)
@@ -135,15 +135,15 @@ else
     util.add_ingredient("advanced-circuit","pcb-solder", 3)
 end
 
-if mods.bzchlorine then
+if mods.bzchlorine2 then
     util.add_ingredient("assembling-machine-3", "pcb", 1)
 end
 
-if mods.bzsilicon then
+if (mods["bzsilicon"] or mods["bzsilicon2"]) then
     util.add_ingredient("solar-cell", "pcb-solder", 2)
 end
 
-if mods.bzgold then
+if mods["bzgold2"]then
     util.add_ingredient("cpu", "pcb-solder", 10)
     util.add_ingredient("mainboard", "pcb-solder", 20)
     util.add_ingredient("cpu-holmium", "pcb-solder", 20)

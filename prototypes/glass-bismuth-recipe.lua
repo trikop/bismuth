@@ -60,7 +60,7 @@ util.add_ingredient("low-density-structure", "bismuth-glass", 4)
 util.add_ingredient("satellite", "bismuth-glass", 100)
 util.remove_ingredient("satellite", glass_name)
 
-if mods.bzcarbon then
+if (mods["bzcarbon"] or mods["bzcarbon2"]) then
   util.add_ingredient("low-density-structure-nanotubes", "bismuth-glass", 4)
 end
 
@@ -116,7 +116,7 @@ if mods["space-exploration"] then
   util.remove_ingredient("se-space-telescope-microwave", glass_name)
 end
 
-if mods.bzfoundry and data.raw.item["foundry"] then
+if mods.bzfoundry2 and data.raw.item["foundry"] then
   util.set_to_founding("bismuth-glass", {force=true})
   util.set_to_founding("se-bismuth-glass", {force=true})
 end

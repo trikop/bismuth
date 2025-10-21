@@ -10,16 +10,16 @@ local category = {}
 -- else
 --   category = "crafting"
 -- end
-
-if mods.bztin and mods.bzgold then
+local bztin = (mods["bztin"] and "bztin") or (mods["bztin2"] and "bztin2") or nil
+if bztin and mods["bzgold2"]then
   pcb_solder_ingredients = {{type="item", name="tin-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1}}
   pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
-  icon = "__bztin__/graphics/icons/solder.png"
-elseif mods.bztin then
+  icon = "__" .. bztin .. "__/graphics/icons/solder.png"
+elseif bztin then
   pcb_solder_ingredients = {{type="item", name="tin-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}}
   pcb_solder_results = {{type="item", name="pcb-solder", amount=6}}
-  icon = "__bztin__/graphics/icons/solder.png"
-elseif mods.bzgold then
+  icon = "__" .. bztin .. "__/graphics/icons/solder.png"
+elseif mods["bzgold2"]then
   pcb_solder_ingredients = {{type="item", name="steel-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}, {type="item", name="silver-ore", amount=1}}
   pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
   icon = "__bismuth__/graphics/icons/solder.png"
@@ -77,7 +77,7 @@ data:extend({
 },
 })
 
-if mods.bzfoundry and data.raw.item["foundry"] then
+if mods.bzfoundry2 and data.raw.item["foundry"] then
   util.set_to_founding("pcb-solder", {force=true})
 end
 
