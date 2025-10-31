@@ -20,7 +20,7 @@ data:extend({
     main_product = util.me.bismuth_plate,
     enabled = true,
     allow_productivity = true,
-    energy_required = 0.9,
+    energy_required = util.k2() and 9 or 0.9,
     ingredients = (util.k2() and {util.item("bismuth-ore", 10)} or {util.item("bismuth-ore", 1)}),
     results = {
       {
