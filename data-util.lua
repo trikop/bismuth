@@ -167,7 +167,7 @@ function util.add_shiftite_recipe(item, shiftites, quantity)
     data:extend({{
       type = "recipe",
       name = name,
-      localised_name = {"", {"item-name."..item}, " ← Shiftite"},
+      localised_name = {"", {"item-name."..item}, " ↁEShiftite"},
       category = "janus-shiftite",
       subgroup = "janus-basic-from-shiftite",
       ingredients = its,
@@ -522,9 +522,6 @@ function util.k2matter(params)
   else
     matter = require("__Krastorio2-spaced-out__/prototypes/libraries/matter")
   end
-  if mods["space-exploration"] then 
-    params.k2matter.needs_stabilizer = true
-  end
   if not data.raw.technology[params.k2matter.unlocked_by] then
     local icon = ""
     if params.k2baseicon then
@@ -613,7 +610,7 @@ function util.se_matter(params)
         enabled = false,
         ingredients = {
           {type="item", name=sedata, amount=1},
-          {type="fluid", name="se-particle-stream", amount=50},
+          {type="fluid", name="se-particle-stream", amount=util.k2() and 500 or 50},
           {type="fluid", name="se-space-coolant-supercooled", amount=25},
         },
         results = {
@@ -653,12 +650,12 @@ function util.se_matter(params)
           ingredients = {
             {type="item", name="se-kr-matter-liberation-data", amount=1},
             {type="item", name=params.ore, amount=params.quant_in},
-            {type="fluid", name="se-particle-stream", amount=50},
+            {type="fluid", name="se-particle-stream", amount=500},
           },
           results = {
             {type="item", name="se-kr-matter-liberation-data", amount=1, probability=.99},
             {type="item", name=sejunk, amount=1, probability=.01},
-            {type="fluid", name="se-particle-stream", amount=params.stream_out, ignored_by_stats=50, ignored_by_productivity=50},
+            {type="fluid", name="se-particle-stream", amount=params.stream_out, ignored_by_stats=500, ignored_by_productivity=500},
           }
         }
       })
