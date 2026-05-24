@@ -5,3 +5,4 @@ require("prototypes/ammo")
 
 require("prototypes/bismuth-enriched")
 require("prototypes/bismuth-recipe-se")
+require("prototypes/bismuth-matter")

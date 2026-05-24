@@ -100,7 +100,7 @@ if mods["space-exploration"] then
   end
   
   util.add_effect("se-pyroflux-smelting", {type = "unlock-recipe", recipe= "se-bismuth-glass"})
-  util.add_ingredient("se-bismuth-glass", {type = "fluid", name = "se-pyroflux", amount = 10})
+  util.add_ingredient("se-bismuth-glass", "se-pyroflux", 10)
 
   util.add_ingredient("se-low-density-structure-beryllium", "bismuth-glass", 2)
   util.remove_ingredient("se-low-density-structure-beryllium", glass_name)
