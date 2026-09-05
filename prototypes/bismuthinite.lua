@@ -69,8 +69,8 @@ local bismuth_contain_sulfur = util.me.get_setting("bismuth-contain-sulfur") / 1
             required_fluid = fluid,
             results = 
             {
-              {type="item", name="bismuth-ore", amount=1, probability=bismuth_contain_bismuth},
-              {type="item", name="sulfur", amount=1, probability=bismuth_contain_sulfur},
+              {type="item", name="bismuth-ore", amount=1, independent_probability=bismuth_contain_bismuth},
+              {type="item", name="sulfur", amount=1, independent_probability=bismuth_contain_sulfur},
             }
           },
           collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
