@@ -51,7 +51,7 @@ data:extend({
       {icon = icon, icon_size = 128, tint = {r = 0.36, g = 0.32, b = 0.26, a = 0.4}},
       {icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
     },
-    category = "crafting",
+    categories = {"crafting"},
     order = "d[pcb-solder]",
     enabled = false,
     energy_required = 1.6,

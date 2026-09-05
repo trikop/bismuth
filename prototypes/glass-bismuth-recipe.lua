@@ -28,7 +28,7 @@ data:extend({
 {
     type = "recipe",
     name = "bismuth-glass",
-    category = "smelting",
+    categories = {"smelting"},
     order = "d[bismuth-glass]",
     enabled = false,
     energy_required = 1,
@@ -69,7 +69,7 @@ if mods["space-exploration"] then
   {
       type = "recipe",
       name = "se-bismuth-glass",
-      category = "smelting",
+      categories = {"smelting"},
       order = "d[bismuth-glass]",
       enabled = false,
       energy_required = 1,

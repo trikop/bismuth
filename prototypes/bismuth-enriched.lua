@@ -27,7 +27,7 @@ data:extend(
     icon = "__bismuth__/graphics/icons/enriched-bismuth.png",
     icon_size = 64,
     icon_mipmaps = 3,
-    category = "chemistry",
+    categories = {"chemistry"},
     energy_required = 3,
     enabled = false,
     always_show_made_in = true,
@@ -62,7 +62,7 @@ data:extend(
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3 },
         { icon = "__bismuth__/graphics/icons/enriched-bismuth.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
       },
-      category = "smelting",
+      categories = {"smelting"},
       energy_required = 16,
       enabled = false,
       always_show_made_in = true,
@@ -78,7 +78,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-bismuth",
-		category = "kr-fluid-filtration",
+		categories = {"kr-fluid-filtration"},
 		icons =
 		{
 			{

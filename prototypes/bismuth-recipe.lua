@@ -8,7 +8,7 @@ data:extend({
   {
     type = "recipe",
     name = util.me.bismuth_plate,
-    category = "smelting",
+    categories = {"smelting"},
     order = "d[bismuth-plate]",
     icons = (util.k2() and
         {

@@ -168,7 +168,7 @@ function util.add_shiftite_recipe(item, shiftites, quantity)
       type = "recipe",
       name = name,
       localised_name = {"", {"item-name."..item}, " ↁEShiftite"},
-      category = "janus-shiftite",
+      categories = {"janus-shiftite"},
       subgroup = "janus-basic-from-shiftite",
       ingredients = its,
       results = {util.item(item, 5)},
@@ -501,7 +501,7 @@ function util.se_landfill(params)
         energy_required = 1,
         enabled=false,
         name = lname,
-        category = "hard-recycling",
+        categories = {"hard-recycling"},
         order = "z-b-"..params.ore,
         subgroup = "terrain",
         results = {{type="item", name="landfill", amount=1}},
@@ -593,7 +593,7 @@ function util.se_matter(params)
         type = "recipe",
         name = fname,
         localised_name = {"recipe-name.se-matter-fusion-to", {"item-name."..params.ore}},
-        category = "space-materialisation",
+        categories = {"space-materialisation"},
         subgroup = "materialisation",
         order = "a-b-z",
         icons = {
@@ -632,7 +632,7 @@ function util.se_matter(params)
           type = "recipe",
           name = lname,
           localised_name = {"recipe-name.se-kr-matter-liberation", {"item-name."..params.ore}},
-          category = "space-materialisation",
+          categories = {"space-materialisation"},
           subgroup = "advanced-particle-stream",
           order = "a-b-z",
           icons = {
@@ -1441,7 +1441,7 @@ function util.set_category(recipe_name, category, options)
   if data.raw.recipe[recipe_name] and data.raw["recipe-category"][category] then
     me.add_modified(recipe_name)
     prepare_redo_recycling(recipe_name)
-    data.raw.recipe[recipe_name].category = category
+    data.raw.recipe[recipe_name].categories = {category}
   end
 end
 
@@ -2044,7 +2044,7 @@ function util.addtype(name,atint,desc) --,pictures)
   local procreschunk = {
     allow_decomposition = false,
     always_show_products = true,
-    category = reccategory,
+    categories = {reccategory},
     enabled = hiderec,
     energy_required = 5,
     ingredients = {
@@ -2100,7 +2100,7 @@ function util.addtype(name,atint,desc) --,pictures)
   --RECIPE: Processing the asteroid chunks into resource chunks
   local processasteroid = {
     allow_decomposition = false,
-    category = reccategory,
+    categories = {reccategory},
     name = "asteroid-" .. name,
     localised_name = {"recipe-name.asteroid-chunk", {"item-name." .. name}},
     localised_description = {"recipe-description.asteroid-chunk", {"item-name." .. name}},
