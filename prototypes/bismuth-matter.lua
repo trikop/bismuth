@@ -1,5 +1,5 @@
 -- Matter recipes for Krastorio2
-local util = require("data-util");
+local util = require("data-util")
 if util.k2() then
 
 data:extend(
@@ -10,13 +10,13 @@ data:extend(
     icons =
     {
       {
-        icon = util.k2assets().."/technologies/matter-stone.png",
+        icon = util.k2assets().."/technologies/backgrounds/matter.png",
         icon_size = 256,
       },
       {
         icon = "__bismuth__/graphics/icons/bismuth-ore.png",
         icon_size = 64, icon_mipmaps = 3,
-        scale = 1.25,
+        scale = 1,
       }
     },
     effects = {},
