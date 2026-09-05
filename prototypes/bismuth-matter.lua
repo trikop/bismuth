@@ -52,8 +52,8 @@ util.k2matter({
 
 if mods["space-exploration"] then
     util.add_ingredient("kr-matter-to-bismuth-ore", "se-kr-charged-basic-stabilizer", 1, {force = true})
-    util.add_product("kr-matter-to-bismuth-ore", { type = "item", name = "se-kr-charged-basic-stabilizer", amount = 1, probability = 0.199 }, {force = true})
-    util.add_product("kr-matter-to-bismuth-ore", { type = "item", name = "se-kr-basic-stabilizer", amount = 1, probability = 0.8 }, {force = true})
+    util.add_product("kr-matter-to-bismuth-ore", { type = "item", name = "se-kr-charged-basic-stabilizer", amount = 1, independent_probability = 0.199 }, {force = true})
+    util.add_product("kr-matter-to-bismuth-ore", { type = "item", name = "se-kr-basic-stabilizer", amount = 1, independent_probability = 0.8 }, {force = true})
 end
 
 util.k2matter({
