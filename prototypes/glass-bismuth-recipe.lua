@@ -28,7 +28,7 @@ data:extend({
 {
     type = "recipe",
     name = "bismuth-glass",
-    category = "smelting",
+    categories = {"smelting"},
     order = "d[bismuth-glass]",
     enabled = false,
     energy_required = 1,
@@ -69,7 +69,7 @@ if mods["space-exploration"] then
   {
       type = "recipe",
       name = "se-bismuth-glass",
-      category = "smelting",
+      categories = {"smelting"},
       order = "d[bismuth-glass]",
       enabled = false,
       energy_required = 1,
@@ -117,8 +117,8 @@ if mods["space-exploration"] then
 end
 
 if mods.bzfoundry2 and data.raw.item["foundry"] then
-  data.raw.recipe["bismuth-glass"].additional_categories = { "founding"}
+  table.insert(data.raw.recipe["bismuth-glass"].categories, "founding")
   if mods["space-exploration"] then
-    data.raw.recipe["se-bismuth-glass"].additional_categories = { "founding"}
+    table.insert(data.raw.recipe["se-bismuth-glass"].categories,"founding")
   end
 end

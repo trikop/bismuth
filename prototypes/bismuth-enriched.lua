@@ -27,7 +27,7 @@ data:extend(
     icon = "__bismuth__/graphics/icons/enriched-bismuth.png",
     icon_size = 64,
     icon_mipmaps = 3,
-    category = "chemistry",
+    categories = {"chemistry"},
     energy_required = 3,
     enabled = false,
     always_show_made_in = true,
@@ -62,7 +62,7 @@ data:extend(
         { icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3 },
         { icon = "__bismuth__/graphics/icons/enriched-bismuth.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
       },
-      category = "smelting",
+      categories = {"smelting"},
       energy_required = 16,
       enabled = false,
       always_show_made_in = true,
@@ -78,7 +78,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-bismuth",
-		category = "kr-fluid-filtration",
+		categories = {"kr-fluid-filtration"},
 		icons =
 		{
 			{
@@ -104,8 +104,8 @@ data:extend(
 		results =
 		{
 			{type = "fluid", name = "water", amount = 90, ignored_by_stats=90, ignored_by_productivity=90},
-			{type = "item",  name = "stone", probability = 0.30, amount = 1},
-			{type = "item",  name = "bismuth-ore", probability = 0.50, amount = 1},
+			{type = "item",  name = "stone", independent_probability = 0.30, amount = 1},
+			{type = "item",  name = "bismuth-ore", independent_probability = 0.50, amount = 1},
 		},
 		crafting_machine_tint =
 		{

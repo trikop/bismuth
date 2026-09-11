@@ -195,7 +195,7 @@ if not util.k2() then
     {
       type = "recipe",
       name = "firearm-magazine-bismuth",
-      category = "crafting",
+      categories = {"crafting"},
       order = "a[basic-clips]-a[firearm-magazine]",
       energy_required = 1,
       ingredients = magazine,
@@ -210,7 +210,7 @@ if not util.k2() then
     {
       type = "recipe",
       name = "shotgun-shell-bismuth",
-      category = "crafting",
+      categories = {"crafting"},
       order = "a[shotgun]-a[basic]",
       energy_required = 1,
       ingredients = shotgun,
@@ -228,7 +228,7 @@ else
     {
       type = "recipe",
       name = "pistol-magazine-bismuth",
-      category = "crafting",
+      categories = {"crafting"},
       order = "a[basic-clips]-a[pistol-magazine]",
       energy_required = 1,
       ingredients = k2pistol,
@@ -243,7 +243,7 @@ else
     {
       type = "recipe",
       name = "rifle-magazine-bismuth",
-      category = "crafting",
+      categories = {"crafting"},
       order = "a[basic-clips]-a[rifle-magazine]",
       energy_required = 1,
       ingredients = k2rifle,
@@ -258,7 +258,7 @@ else
     {
       type = "recipe",
       name = "shotgun-shell-bismuth",
-      category = "crafting",
+      categories = {"crafting"},
       order = "a[shotgun]-a[basic]",
       energy_required = 1,
       ingredients = shotgun,

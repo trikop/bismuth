@@ -3,7 +3,7 @@
     "version": "2.0.10",
     "title": "Bismuth",
     "author": "trikop, cackling fiend",
-    "factorio_version": "2.0",
+    "factorio_version": "2.1",
     "description": "Intended to be played with all BZ mods. And also in the SEK2BZ combo for a very so called fun experience.\nMade to incorporate itself into a lot of recipes\n\nMost code is a modified version of the code in Brevven's mods (the BZ mods) It's quite useful as a base for making a mod I'd say :D\n\nMost of the graphics is placeholderish, will have to do something about that xD",
     "dependencies": [
         "? space-exploration >= 0.7.32",

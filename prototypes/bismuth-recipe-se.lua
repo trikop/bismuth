@@ -42,7 +42,7 @@ if util.se6() then
   },
   {
     type = "recipe",
-    category = "smelting",
+    categories = {"smelting"},
     name = "molten-bismuth",
     main_product = "molten-bismuth",
     subgroup = "bismuth",
@@ -62,7 +62,7 @@ if util.se6() then
   {
     type = "recipe",
     name = "bismuth-ingot",
-    category = "casting",
+    categories = {"casting"},
     results = {{type="item", name="bismuth-ingot", amount=1}},
     energy_required = 25,
     ingredients = {
@@ -74,7 +74,7 @@ if util.se6() then
   },
   {
     type = "recipe",
-    category = "crafting",
+    categories = {"crafting"},
     name = "bismuth-ingot-to-plate",
 
     icons = {
@@ -113,7 +113,7 @@ else
     {
       type = "recipe",
       name = "enriched-bismuth-smelting-vulcanite",
-      category = "smelting",
+      categories = {"smelting"},
       order = "d[bismuth-plate]",
       energy_required = 24,
       enabled = false,
@@ -143,7 +143,7 @@ else
     {
       type = "recipe",
       name = "bismuth-smelting-vulcanite",
-      category = "smelting",
+      categories = {"smelting"},
       subgroup = "plates",
       order = "d[bismuth-plate]",
       energy_required = 24,

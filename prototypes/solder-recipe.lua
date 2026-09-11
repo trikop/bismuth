@@ -13,7 +13,7 @@ local category = {}
 local bztin = (mods["bztin"] and "bztin") or (mods["bztin2"] and "bztin2") or nil
 if bztin and mods["bzgold2"]then
   pcb_solder_ingredients = {{type="item", name="tin-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1}}
-  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
+  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, independent_probability = 0.8}}
   icon = "__" .. bztin .. "__/graphics/icons/solder.png"
 elseif bztin then
   pcb_solder_ingredients = {{type="item", name="tin-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}}
@@ -21,7 +21,7 @@ elseif bztin then
   icon = "__" .. bztin .. "__/graphics/icons/solder.png"
 elseif mods["bzgold2"]then
   pcb_solder_ingredients = {{type="item", name="steel-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}, {type="item", name="silver-ore", amount=1}}
-  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
+  pcb_solder_results = {{type="item", name="pcb-solder", amount=6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, independent_probability = 0.8}}
   icon = "__bismuth__/graphics/icons/solder.png"
 else
   pcb_solder_ingredients = {{type="item", name="steel-plate", amount=4}, {type="item", name="bismuth-plate", amount=6}}
@@ -51,7 +51,7 @@ data:extend({
       {icon = icon, icon_size = 128, tint = {r = 0.36, g = 0.32, b = 0.26, a = 0.4}},
       {icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
     },
-    category = "crafting",
+    categories = {"crafting"},
     order = "d[pcb-solder]",
     enabled = false,
     energy_required = 1.6,
